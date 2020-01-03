@@ -1,0 +1,74 @@
+@mixin btnCreator ($name, $color){
+    .btn-#{$name}{
+        border-color: $color;
+        background-color: transparentize($color, 0.9);
+        color: $color;
+    }
+    .btn-#{$name}:hover, .btn-#{$name}:focus{
+      background-color: rgba($color, 0.6);
+      color: darken($color, 25%);
+      font-weight: bolder;
+    }
+}
+@include btnCreator("blue", $blue);
+@include btnCreator("yellow", $yellow);
+@include btnCreator("green", $green);
+@include btnCreator("teal", $teal);
+@include btnCreator("red", $red);
+
+@mixin testimonialGenerator($author) {
+    .testimonial-#{$author}{
+        text-align: center;
+        margin: 8px;
+        border: solid white 5px;
+        padding: 8px;
+    }
+    .testimonial-#{$author}::before{
+        content: "\"";
+        width: 100%;
+        display: inherit;
+        position: relative;
+        z-index: 1;
+        top: 0;
+        color: black;
+        text-align: center;
+        font-size: xxx-large;
+        font-style: oblique;
+        font-weight: bolder;
+        height: 1em;
+    }
+    .testimonial-#{$author}::after{
+        content: "-#{author}";
+        width: 100%;
+        left: 15%;
+        color: rgba($color: black, $alpha: 0.4);
+        text-align: start;
+        position: relative;
+        display: inherit;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+@mixin createColoredAppButton($name, $color){
+    .appButton.#{$name}-border{
+      border: 7px solid $color;
+    } 
+    .appButton.#{$name}-border > *{
+      color: $color;
+    }  
+  }
+  @include createColoredAppButton("red", $red);
+  @include createColoredAppButton("blue", $blue);
+  @include createColoredAppButton("green", $green);
+  @include createColoredAppButton("yellow", $yellow);
+  @include createColoredAppButton("teal", $teal);
+
+@mixin textColorCreator ($name, $color){
+  .text-#{$name}{
+      color: $color;
+  }
+}
+
+@include textColorCreator("blue", $blue);
+@include textColorCreator("red", $red);
+@include textColorCreator("yellow", $yellow);

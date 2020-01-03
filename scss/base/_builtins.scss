@@ -1,0 +1,57 @@
+html{
+    height:100%;
+    background-color:white;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+a{
+    color: $blue;
+    text-decoration: none;
+    text-align: center;
+    transition: all .3s ease;
+}
+input{
+    width: 50%;
+    margin: 5px;
+    padding: 8px;
+    transition: all .3s ease;
+}
+
+textarea{
+    width: 50%;
+    height: 500px;
+    padding: 8px;
+    font-family: 'Nunito', sans-serif;//I for some reason it ignores it in the body
+}
+
+button{
+    width: 50%;
+    margin: 5px;
+    padding: 8px;
+    color: $blue;
+    font-size: 25px;
+    border-color: $blue;
+    background-color: transparentize($blue, 0.9);
+    transition: all .3s ease;
+}
+button:hover, button:focus{
+    background-color: rgba($blue, 0.6);
+    color: darken($blue, 25%);
+    font-weight: bolder;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+table{
+    width: 100%;
+    border: 5px solid $blue;
+    border-radius: 17px;
+}

@@ -1,0 +1,57 @@
+@mixin footerForColor($name, $color){
+    .socialButton.#{$name}{
+        border: 4px solid $color; 
+    }
+    .footer.#{$name}{
+        @if $color == $red{
+            background-image: url(../Resources/universal/footer-red.svg);
+        } @else {
+            background-image: url(../Resources/universal/footer.svg);
+        }
+    }
+}
+@mixin superFooterForColor($name, $color){
+    .superFooter.#{$name}{
+        @if $color == $red{
+            background-image: url(../Resources/universal/superFooter-red.svg);
+        } @else {
+            background-image: url(../Resources/universal/superFooter.svg);
+        }
+    }
+}
+
+@mixin navForColor($name, $color){
+    .burger.#{$name}::before, .bar.#{$name}, .burger.#{$name}::after{
+        background: $color;
+    }
+
+    .burger.#{$name}{
+        border-color: $color;
+    }
+    .innerMenuLink.red{
+        color: #fcd5d5;
+    }
+
+    nav.#{$name}::before{
+        @if $color == $red{
+            background-image: url(../Resources/universal/menu-red.svg);
+        } @else {
+            background-image: url(../Resources/universal/menu.svg);
+        }
+    }
+    @media screen and (max-width: 500px){
+        nav.#{$name}::before {
+            background-color: $color;
+        }
+    }
+}
+
+@mixin carouselForColor($name, $color){
+    .carousel.#{$name}::before{
+        background-color: transparentize($color,0.9);
+    }
+
+    .arrow.#{$name}{
+        stroke: $color;
+    }
+}

@@ -1,0 +1,15 @@
+.pricingTable{
+    background-color: white;
+    border-radius: 35px;
+    border: solid $blue 7px;
+    margin: 4px;
+    padding: 4px;
+    height: 57vh;
+    &.custom{
+        height: 25vh; 
+    }
+}
+
+.price, .priceAfter{
+    text-align: center;
+}

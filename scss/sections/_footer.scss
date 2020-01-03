@@ -1,0 +1,141 @@
+.connectText{
+    grid-area: connect;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.area1{
+    grid-area: area1;
+    background-image: url(../Resources/universal/linkedin.svg);
+}
+.area2{
+    grid-area: area2;
+    background-image: url(../Resources/universal/facebook.svg);
+}
+.area3{
+    grid-area: area3;
+    background-image: url(../Resources/universal/twitter.svg);
+}
+.area4{
+    grid-area: area4;
+    background-image: url(../Resources/universal/mail.svg);
+}
+.superFooter{
+    grid-area: superFooter;
+}
+.socialButton{
+    background-color: white;
+    border-radius: 50vh;
+    width: 7vw;
+    height: 7vw;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid $blue;
+    transition: background-size 0.2s ease-in-out;
+
+    &.large{
+        width: 100%;
+        height: 10vh;
+        grid-column-start: area1;
+        grid-column-end: area4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2{
+            transition: font-size 0.2s ease-in-out;
+        }
+    }
+
+    &.noBackground{
+        background-color: transparent;
+        border: none;
+        width: auto;
+        border-radius: 15px;
+    }
+}
+.semi-large{
+    width: 100%;
+    height: 10vh;
+    grid-column-start: area1;
+    grid-column-end: area2;
+    margin-right: 24px;
+    transition: background-color 0.2s ease-in-out;
+    img{
+        width:100%;
+        height: auto;
+    }
+}
+
+.semi-large2{
+    width: 100%;
+    height: 10vh;
+    grid-column-start: area3;
+    grid-column-end: area4;
+    margin-left: 24px;
+    transition: background-color 0.2s ease-in-out;
+    img{
+        width:100%;
+        height: auto;
+    }
+}
+
+.lifearBackground{
+    display: flex;
+    background-color: #555555;
+    width: 100%;
+    border-radius: 50vh;
+    padding: 1.5vh 1.5vw;
+
+    &.left {
+        padding-left: 1vw;
+    }
+    &.right {
+        padding-right: 1vw;
+    }
+
+    @media screen and (max-width: 500px){
+        padding: 0.1vh 1.5vw;
+    }
+}
+
+.socialButton:hover , .socialButton:focus{
+    background-size: 75% 75%;
+}
+
+.semi-large:hover, .semi-large2:hover,.semi-large:focus, .semi-large2:focus, .socialButton.large:hover, .socialButton.large:focus{
+    background-color: $backgroundColor;
+    &.noBackground{
+        background-color: transparent;
+    }
+    h2{
+        font-weight: bolder;
+        font-size: calc(28px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    }
+}
+
+.footer{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    width:100%;
+    height: 50%;
+    background-image: url(../Resources/universal/footer.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: grid;
+    grid-template-areas: ". connect connect connect connect ."
+                         ". area1 area2 area3 area4 .";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+
+    justify-items: center;
+    align-items: center;
+
+    &.black{
+        background-color: black;
+        background-image: unset;
+        column-gap: 12%;
+    }
+}
+@include footerForColor("red",$red);
+ 

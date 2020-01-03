@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - HandTrack</title>
+    <link rel="shortcut icon" type="image/png" href="../Resources/universal/logo.png"/>
+</head>
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script >
+        $("#header").load("html-elements/header.html",function() {
+            $(".headerTitle").text("HandTrack");
+            $(".headerImage").attr("src","../Resources/pages/handtrack/HandTrackLogo.png");
+            $(".headerLogo").remove();
+            $(".headerSubtitle").remove();
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+    <!-- main content -->
+    <div id="contents">
+        <!-- description section -->
+        <div class="Section">
+            <h2 class="text-blue">Reimagining a mouse-free world</h2>
+            <p>
+                HandTrack uses the device’s built-in accelerometer sensors or a joystick to move the mouse pointer on the screen and to ​use the mouse buttons. The information is passed from the phone or watch application to the computer program via WI-FI or Bluetooth.
+​                   <br><br>
+                HandTrack is an innovative way to control your computer via your Android phone/ tablet or via your Android Wear watch. This technology can be used for a variety of different situations. It can be useful for presentations, supporting people with disabilities and for helping people to use a computer in three-dimensional space. Overall, HandTrack further increases computer accessibility. ​
+            </p>
+        </div>
+        <!-- image carousel section -->
+        <div id="imageCarousel"></div>
+        
+        <div class="Section">
+            <h2 class="text-blue">How does it Work</h2>
+            <p style="text-align:left; margin-left:16%;"><strong>1.</strong> Install the HandTrack app on your Android phone and/or WearOS smartwatch</p>
+            <a href="https://play.google.com/store/apps/details?id=com.daniel.apps.handtrack&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img style="max-width:60%;max-height:60%;" alt="Get it on Google Play" src="https://static1.squarespace.com/static/57312a1762cd9460fe950dcd/t/57e4c32b8419c29418b8eca2/1479858951966/"></a>
+            <p style="text-align:left; margin-left:16%;"><strong>2.</strong> Download and Run (no install required) HandTrack server from the buttons below.</pstyle="text-align:left; margin-left:16%;">
+            <div class="TwoColumns">
+                <a class="button btn-blue" href="../Resources/pages/handtrack/WINDOWSHandTrackServer.jar" download>Windows</a>
+                <a class="button btn-blue" href="../Resources/pages/handtrack/MACServer.jar" download>MacOS</a>
+                <a class="button btn-blue" href="../Resources/pages/handtrack/LinuxServer.jar" download>Linux</a>
+            </div>
+            <p style="text-align:left; margin-left:16%;">
+                <strong>3.</strong> Open the server app<br>
+                <strong>4.</strong> Select whether you would like to use Bluetooth or WiFi to connect your devices and click start server<br>
+                <strong>5.</strong> open the android app and go to settings.<br>
+                <strong>6.</strong> Select the same conection method s in the server app Input the ip adddress or mac address<br>
+                <strong>7.</strong> Click back to return back to the first screen<br>
+                <strong>8.</strong> Select the control method<br>
+                <strong>9.</strong> Press the power button and start controlling your computer<br>
+                <br>
+                <strong>Note:</strong> you may need to pair your devices first if you use Bluetooth.<br>
+            </p>
+        </div>
+
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <script>
+        $("#imageCarousel").load("html-elements/carousel.html", function(){
+            
+            $(".carousel").addClass("blue");
+            $(".arrow").addClass("blue");
+            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides\" controls><source src=\"../Resources/pages/handtrack/website.mp4\" type=\"video/mp4\">Video not supported</video>");
+            $("#firstSlide").show();
+            $(".carousel").append("<video class=\"video slides\" controls><source src=\"../Resources/pages/handtrack/wear.mp4\" type=\"video/mp4\">Video not supported</video>");
+        
+            $(".carousel").append("<img class=\"slides\" src=\"../Resources/pages/handtrack/airmouse.png\">")
+                          .append("<img class=\"slides\" src=\"../Resources/pages/handtrack/joystick.png\">")
+                          .append("<img class=\"slides\" src=\"../Resources/pages/handtrack/settings.png\">")
+                          .append("<img class=\"slides\" src=\"../Resources/pages/handtrack/watch_airmouse.png\">")
+                          .append("<img class=\"slides\" src=\"../Resources/pages/handtrack/watch_joystick.png\">")
+                          .append("<img class=\"slides\" src=\"../Resources/pages/handtrack/featureImg.png\">");
+        });
+        $("#footer").load("html-elements/oneAppFooter.html", function(){
+            $(".footer").addClass("blue");
+        });
+        $("#superFooter").load("html-elements/superFooter.html", function(){
+            $(".superFooter").addClass("blue");
+        });
+    </script>
+    <!-- main content ends -->
+</body>
+</html>

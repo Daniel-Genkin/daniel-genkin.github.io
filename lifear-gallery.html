@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - LifeAR Gallery</title>
+    <link rel="shortcut icon" type="image/png" href="../Resources/universal/logo.png"/>
+</head>
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script >
+        $("#header").load("html-elements/header.html",function() {
+            $(".headerTitle").text("LifeAR - Gallery");
+            $(".headerImage").remove();
+            $(".headerLogo").remove();
+            $(".headerSubtitle").remove();
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+    <!-- main content -->
+    <div id="contents">
+        <div class="Section">
+            <h2 class="text-blue">DGApps’ Targets</h2>
+            <div class="row">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/smallposter.png">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/dgappscard.jpg">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/poster.png">
+            </div>
+            <h2 class="text-blue">ScienceAR Targets</h2>
+            <div class="row">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/math.png">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/physics.png">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/tides.png">
+            </div>
+            <h2 class="text-blue">Community Targets</h2>
+            <div class="row">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/monkai.png">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/module-2-copy_2.jpg">
+                <img class="galleryImage" src="../Resources/pages/lifear/gallery/fire.png">
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <script>
+        $("#footer").load("html-elements/actionFooter.html", function(){
+            $(".footer").addClass("blue");
+            $(".connectText").text("What is LifeAR?");
+            $(".socialButton").attr("href", "lifear.html");
+            $("#socialButtonText").text("Learn More");
+        });
+        $("#superFooter").load("html-elements/superFooter.html", function(){
+            $(".superFooter").addClass("blue");
+        });
+    </script>
+    <!-- main content ends -->
+</body>
+</html>

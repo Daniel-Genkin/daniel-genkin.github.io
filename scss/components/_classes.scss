@@ -1,0 +1,142 @@
+.leftAlign{
+    margin-left: -6%;
+}
+.rightAlign{
+    margin-right: -6%;
+}
+.Section{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &.withBackground{
+        border-radius: 25px;
+        background: $backgroundColor;
+    }
+
+    &.withHorizontalDivider{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 12px;
+    }
+}
+
+.ColumnImage{
+    height: 25vmin;
+    width: auto;
+    min-height: 50px;
+    margin-right: 25px;
+    background-image: url(../Resources/pages/index/circle-img-holder.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2vmin;
+    background-position-x: right;
+}
+.ColumnSVG{
+    height: 30vmin;
+    width: auto;
+    min-height: 50px;
+    margin-left: 25px;
+}
+.TwoColumnSection{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    border-style: solid;
+    width: 50%;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 50vh;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.icon{
+    width: 100%;
+    height: auto;
+    
+    &.small{
+        width: 75px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+.rowItem{
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    max-width: 250px;
+
+    &.smallIcons{
+        max-width: 100px;
+    }
+
+    &.withBorder{
+        border-radius: 15px;
+        background-color:  $backgroundColor;
+    }
+
+    *{
+        color: #525252;
+    }
+}
+.appButton{
+    background: rgba(255, 255, 255, 0.75);
+    box-sizing: border-box;
+    backdrop-filter: blur(15px);//might not work on all browsers
+    border-radius: 28px;
+    max-width: 300px;
+    width: 90%;
+    margin: 8px;
+
+    position: relative;
+    padding-bottom: 5em;
+
+    .appLogo{
+        width:75%;
+        margin-top: 8px;
+    }
+
+    p{
+        margin:0;
+        vertical-align: top;
+    }
+    a{
+        width: 86%;
+        line-height: 1.2em;
+        height: 1.2em;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+}
+.appButton:hover, .appButton:focus{
+    box-shadow: 0px 0px 10px #888888;
+}
+
+.interactiveElement{
+    border-color: $blue;
+    border-radius: 3vh;
+    border-style: solid;
+    width: 50%;
+    padding: 8px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 8px;
+    text-align: center;
+}

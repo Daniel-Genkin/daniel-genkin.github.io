@@ -1,0 +1,57 @@
+#ActivismSection{
+    background-image: url(../Resources/pages/lifear/lifear_activism_background2.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: -5.5%;
+    margin-right: -5.5%;
+    height: calc(100vw);
+    margin-bottom: -10%;
+
+    h2{
+        padding-top: 5%; 
+        margin-left: 15%;
+        margin-right: 15%;
+        color: rgb(46, 46, 46);
+        font-size: calc(28px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+    @media screen and (max-width:610px) {
+        h2{
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: calc(20px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        h2{
+            margin-left: 3%;
+            margin-right: 3%;
+            font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+        }
+    }
+}
+
+// below is for business
+.tableHeader{
+    background-color: $blue;
+    color: white;
+}
+.tableIcon{
+    width: 1.1em;
+    height: 1.1em;
+}
+.lifearColumn{
+    background-color: white;
+    box-shadow: 0px 10px 10px gray;
+    
+    &.first{
+        color:$blue;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+    &.last{
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - LifeAR</title>
+    <link rel="shortcut icon" type="image/png" href="../Resources/universal/logo.png"/>
+</head>
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script >
+        $("#header").load("html-elements/header.html",function() {
+            $(".headerTitle").text("LifeAR");
+            $(".headerImage").attr("src","../Resources/pages/lifear/LifeARLogo.png");
+            $(".headerLogo").remove();
+            $(".headerSubtitle").text("Ready To Discover AR?");
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+    <!-- main content -->
+    <div id="contents">
+        <div class="Section">
+            <h2 class="text-blue">Modernizing Traditional Print Media</h2>
+            <p>LifeAR is a universal augmented reality (AR) platform
+                that presents information in an interactive and engaging
+                ways. Use LifeAR to enhance your presentations and to
+                create unique viewer experiences.</p>
+        </div>
+        <div class="TwoColumnSection">
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/discover.svg">
+                <h2 class="text-blue">1. Discover</h2>
+                <p style="margin-top:0;">Point your device at any material that is part of the LifeAR database</p>
+            </div>
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/info.svg">
+                <h2 class="text-blue">2. Learn more</h2>
+                <p style="margin-top:0;">Watch 3D models, videos, images, websites and more appear</p>
+            </div>
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/share.svg">
+                <h2 class="text-blue">3. Share & Save</h2>
+                <p style="margin-top:0;">Save the content for later or share it with friends</p style="margin-top:0;">
+            </div>
+        </div>
+        <div class="Section">
+            <h2 class="text-blue">What is AR</h2>
+            <p>
+                The power of augmented reality (AR) makes images, videos and 3D
+                    models emerge from printed materials and become interactive. ​
+                    Imagine user manuals or informational flyers with embedded customized videos or 3D models.
+                    With AR, you can make you advertisments standout for your clients!
+            </p>
+        </div>
+        <div class="Section">
+            <h2 class="text-blue">Modernizing Printed Marketing</h2>
+                <table cellspacing="0">
+                    <tr class="tableHeader">
+                        <th style="color: white;">Capability</th>
+                        <th class="lifearColumn first">LifeAR</th>
+                        <th style="color: white;">Paper</th>
+                    </tr>
+                    <tr>
+                        <td>Interactivity</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td>
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Effects, hidden content, etc.</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Links to websites</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td>
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Buttons</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Tracking</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Quick Content Swapping</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Download and watch later</td>
+                        <td class="lifearColumn"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                    <tr>
+                        <td>Share with remote friends</td>
+                        <td class="lifearColumn last"><img class="tableIcon" src="../Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td><img class="tableIcon" src="../Resources/pages/lifear/x.svg"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="Section" id="AddingTargets">
+                <h2 class="text-blue">How does it work</h2>
+                <div class="Section">
+                    <p>put a video here showing how ti works (UI demo)</p>
+                    <a href="instructions page" class="button btn-blue">Written Instructions</a>
+                </div>
+                <div class="TwoColumnSection">
+                    <a style="width: 100%" href="lifear-faq.html" class="button btn-blue">FAQ</a>
+                    <a style="width: 100%" href="lifear-gallery.html" class="button btn-blue">Gallery</a>
+                </div>
+            </div>
+            <!-- id used for anchor -->
+            <div class="Section" id="Pricing">
+                <h2 class="text-blue">Pricing</h2>
+                <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the database</p>
+                <div class="TwoColumnSection">
+                    <div id="pricingBasic"></div>
+                    <div id="pricingSmall"></div>
+                    <div id="pricingMedium"></div>
+                    <div id="pricingLarge"></div>
+                </div>
+                <div id="pricingCustom"></div>
+                <div class="TwoColumnSection pricingTable">
+                    <h3 class="text-blue">Included:</h3>
+                    <ul>
+                        <li style="text-align: left;">Unlimited free swapping</li>
+                        <li style="text-align: left;">Saving and sharing options</li>
+                        <li style="text-align: left;">HTML and Button extras (displayed below the main content area)</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="ActivismSection"></div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <script>
+        $("#pricingBasic").load("html-elements/pricing-table.html", function(){
+            $("#pricingBasic .pricingTable .planTitle").text("STARTER");
+            $("#pricingBasic .pricingTable .description").text("Perfect for experimentation");
+            $('#pricingBasic .pricingTable .numImgs').text("1");
+            $('#pricingBasic .pricingTable .numVids').text("1");
+            $("#pricingBasic .pricingTable .price").text("$10");
+        });
+        $("#pricingSmall").load("html-elements/pricing-table.html", function(){
+            $("#pricingSmall .pricingTable .planTitle").text("SMALL");
+            $("#pricingSmall .pricingTable .description").text("Perfect for occasional light usage");
+            $('#pricingSmall .pricingTable .numImgs').text("3");
+            $('#pricingSmall .pricingTable .numVids').text("3");
+            $("#pricingSmall .pricingTable .price").text("$30");
+        });
+        $("#pricingMedium").load("html-elements/pricing-table.html", function(){
+            $("#pricingMedium .pricingTable .planTitle").text("MEDIUM");
+            $("#pricingMedium .pricingTable .description").text("Recommended for most users");
+            $('#pricingMedium .pricingTable .numImgs').text("5");
+            $('#pricingMedium .pricingTable .numVids').text("5");
+            $("#pricingMedium .pricingTable .price").text("$40");
+        });
+        $("#pricingLarge").load("html-elements/pricing-table.html", function(){
+            $("#pricingLarge .pricingTable .planTitle").text("LARGE");
+            $("#pricingLarge .pricingTable .description").text("Perfect for larger marketing implementations");
+            $('#pricingLarge .pricingTable .numImgs').text("10");
+            $('#pricingLarge .pricingTable .numVids').text("10");
+            $("#pricingLarge .pricingTable .price").text("$50");
+        });
+        $("#pricingCustom").load("html-elements/pricing-table.html", function(){
+            $("#pricingCustom .pricingTable .planTitle").text("CUSTOM PLAN");
+            $("#pricingCustom .pricingTable .description").text("Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload");
+            $('#pricingCustom .pricingTable .numImgs').hide();
+            $('#pricingCustom .pricingTable .numVids').hide();
+            $('#pricingCustom .pricingTable .imgTarget').hide();
+            $('#pricingCustom .pricingTable .vidTarget').hide();
+            $("#pricingCustom .pricingTable .price").text("$100+");
+            $("#pricingCustom .pricingTable").addClass("custom");
+        });
+        $("#footer").load("html-elements/lifearFooter.html");
+    </script>
+    <!-- main content ends -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+#testimonialSection{
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+@include testimonialGenerator("authorA");
+@include testimonialGenerator("authorB");
+@include testimonialGenerator("authorC");
+
+// @include backgroundShapeGenerator("contents", "left", url(../Resources/universal/randomShapeLeft1.svg));
+// @include backgroundShapeGenerator("testimonialSection", "right", url(../Resources/universal/randomShapeRight1.svg));

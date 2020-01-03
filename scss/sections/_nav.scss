@@ -1,0 +1,209 @@
+
+.innerMenu{
+  margin-left:5%;
+}
+
+.myList {
+  margin: 10px 0;
+  font-size: calc(8px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(2em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));;
+}
+.myList:first-child {
+  margin-top: 0;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.menuInput {
+  position: fixed;
+  opacity: 0;
+
+}
+.menuLabel {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.menuLabel::before {/*this is the click off menu close*/
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.menuLabel .burger {
+  position: fixed;
+  top: 14px;
+  right: 15px;
+  z-index: 40;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
+  
+  background-color:white;
+  border: 7px solid $blue;
+
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+}
+.menuLabel .burger::before,
+.bar, .menuLabel .burger::after {
+  position: fixed;
+  right: 39px;
+  display: block;
+  width: 25px;
+  height: 5px;
+  background: $blue;
+  content: '';
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+/*when burger is not an x top, center and bottom respectively*/
+.menuLabel .burger::before {
+  top: 35px;
+  transform-origin: top left;
+}
+
+.menuLabel .burger .bar {
+  top: 47px;
+}
+
+.menuLabel .burger::after {
+  transform-origin: bottom left;
+  top: 59px;
+}
+/*when burger is an x end*/
+
+.menuLabel:focus + .menuLabel .burger,
+.menuLabel:hover .menuLabel .burger {
+  opacity: .75;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  transform: translate3d(0, 0, 0);
+  transform: translateX(100%);
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  background-image: url(../Resources/universal/menu.svg);  
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position-x: right;
+  content: '';
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 500px){
+  nav::before {
+    background-color: $blue;
+    background-image: unset;
+  }
+}
+
+.innerMenuLink, .menuLink{
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 500;
+  font-style: bold;
+}
+.menuLink{
+   color: white;
+ }
+.innerMenuLink{
+   color: #d5d7fc;
+ }
+.myList{
+  transform: translateX(100%);
+  transition: color .15s, transform .5s;
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+#list{
+  margin-top: 10vh;
+  width: 20em;
+}
+#list:nth-child(1) {
+  transition-delay: 0s, 100ms;
+}
+#list:nth-child(2) {
+  transition-delay: 0s, 150ms;
+}
+.menuLink:hover, .menuLink:focus, .innerMenuLink:hover, .innerMenuLink:focus {
+  font-weight: bold;
+}
+
+#navcheck:checked > * {
+  pointer-events: none;
+}
+#navcheck:checked + .menuLabel::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+#navcheck:checked + .menuLabel .burger::before, #navcheck:checked + .menuLabel .burger::after {
+  width: 41px;
+  right: 25px;
+}
+#navcheck:checked + .menuLabel .burger::before {
+  transform: rotate(45deg) translateY(-50%);
+}
+#navcheck:checked + .menuLabel .burger::after {
+  transform: rotate(-45deg) translateY(50%);
+}
+#navcheck:checked + .menuLabel .burger .bar {
+  transform: scale(0.01);
+}
+#navcheck:checked ~ nav {
+  transform: translateX(0);
+}
+
+#navcheck:checked ~ nav ul li {
+  transform: translateX(0);
+}
+#navcheck:checked ~ main .content {
+  transform: translateX(3em);
+  transform-origin: right center;
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  overflow: hidden;
+}
+@include navForColor("red", $red);

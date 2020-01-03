@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - Slappy Sandwich</title>
+    <link rel="shortcut icon" type="image/png" href="../Resources/universal/logo.png"/>
+</head>
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script >
+        $("#header").load("html-elements/header.html",function() {
+            $(".headerTitle").text("Slappy Sandwich");
+            $(".headerImage").attr("src","../Resources/pages/slappy-sandwich/app_slappysandwich.png");
+            $(".headerLogo").remove();
+            $(".headerSubtitle").remove();
+            
+            $(".header").addClass("red");
+        });
+        $("#nav").load("html-elements/nav.html", function(){
+            $(".burger").addClass("red");
+            $(".bar").addClass("red");
+            $("#menu").addClass("red");
+            $(".innerMenuLink").addClass("red");
+        });
+    </script>
+    <!-- main content -->
+    <div id="contents" class="red">
+        <!-- description section -->
+        <div class="Section">
+            <h2 class="text-red">Slap it till you drop it</h2>
+            <p>
+                Start tapping, slapping and having fun! Slap your way to collect all the doohickeys and various slappers.
+                <br>
+                How far can you get? Download and find out! Then challenge your friends!
+                <br>
+                Game features:<br>
+                ♦ Rookie and Pro modes<br>
+                ♦ Cool doohickeys and slappers to collect<br>
+                ♦ Simple rules/controls<br>
+                ♦ Realistic physics<br>
+                ♦ Minimalistic<br>
+                ♦ Fun sound effects<br>
+                ♦ Share score with your friends<br>
+                <br>
+                Have fun slapping!
+                Fun for all ages!
+            </p>
+        </div>
+        <!-- image carousel section -->
+        <div id="imageCarousel"></div>
+        <div class="TwoColumnSection">
+            <img class="icon small" src="../Resources/pages/slappy-sandwich/doohickeys/1.png">
+            <img class="icon small" src="../Resources/pages/slappy-sandwich/doohickeys/2.png">
+            <img class="icon small" src="../Resources/pages/slappy-sandwich/doohickeys/3.png">
+            <img class="icon small" src="../Resources/pages/slappy-sandwich/doohickeys/4.png">
+            <img class="icon small" src="../Resources/pages/slappy-sandwich/doohickeys/5.png">
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <script>
+        $("#imageCarousel").load("html-elements/carousel.html", function(){
+            
+            $(".carousel").addClass("red");
+            $(".arrow").addClass("red");
+            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides red\" controls><source src=\"../Resources/pages/slappy-sandwich/slappysandwichpromo.mp4\" type=\"video/mp4\">Video not supported</video>");
+            $("#firstSlide").show();
+            $(".carousel").append("<img class=\"slides red\" src=\"../Resources/pages/slappy-sandwich/promoGame.jpg\">")
+            .append("<img class=\"slides red\" src=\"../Resources/pages/slappy-sandwich/promoRules.jpg\">")
+            .append("<img class=\"slides red\" src=\"../Resources/pages/slappy-sandwich/promoLast.jpg\">");
+        });
+        $("#footer").load("html-elements/twoAppFooter.html", function(){
+            $(".footer").addClass("red");
+            $(".connectText").addClass("text-red");
+        });
+        $("#superFooter").load("html-elements/superFooter.html", function(){
+            $(".superFooter").addClass("red");
+        });
+    </script>
+    <!-- main content ends -->
+</body>
+</html>

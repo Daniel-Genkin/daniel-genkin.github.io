@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - LifeAR</title>
+    <link rel="shortcut icon" type="image/png" href="../Resources/universal/logo.png"/>
+</head>
+
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script>
+        $("#header").load("html-elements/header.html", function () {
+            $(".headerTitle").text("LifeAR");
+            $(".headerImage").attr("src", "../Resources/pages/lifear/LifeARLogo.png");
+            $(".headerLogo").remove();
+            $(".headerSubtitle").text("Ready To Discover AR?");
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+    <!-- main content -->
+    <div id="contents">
+        <div class="Section">
+            <h2 class="text-blue">Modernizing Traditional Print Media</h2>
+            <p>LifeAR is a universal augmented reality (AR) platform
+                that presents information in an interactive and engaging
+                ways. Use LifeAR to enhance your presentations and to
+                create unique viewer experiences.</p>
+        </div>
+        <div class="TwoColumnSection">
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/discover.svg">
+                <h2 class="text-blue">1. Discover</h2>
+                <p style="margin-top:0;">Point your device at any material that is part of the LifeAR community</p>
+            </div>
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/info.svg">
+                <h2 class="text-blue">2. Learn more</h2>
+                <p style="margin-top:0;">Watch 3D models, videos, images, websites and more appear</p>
+            </div>
+            <div class="Section">
+                <img class="icon small" src="../Resources/pages/lifear/share.svg">
+                <h2 class="text-blue">3. Share & Save</h2>
+                <p style="margin-top:0;">Save the content for later or share it with friends</p style="margin-top:0;">
+            </div>
+        </div>
+        <div class="TwoColumnSection">
+            <img class="ColumnSVG leftAlign" src="../Resources/pages/lifear/phoneScanning.svg">
+            <div>
+                <h2 class="text-blue">What is AR</h2>
+                <p>
+                    The power of augmented reality (AR) makes images, videos and 3D
+                    models emerge from printed materials and become interactive. ​
+                    Imagine user manuals or informational flyers with embedded customized videos or 3D models.
+                    With AR, you can make everything around you interactive!
+                </p>
+            </div>
+        </div>
+        <div class="TwoColumnSection">
+            <a style="width: 100%" href="lifear-faq.html" class="button btn-blue">FAQ</a>
+            <a style="width: 100%" href="lifear-gallery.html" class="button btn-blue">Gallery</a>
+        </div>
+         <div id="ActivismSection"></div>
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <script>
+        $("#footer").load("html-elements/lifearFooter.html");
+    </script>
+    <!-- main content ends -->
+</body>
+
+</html>
