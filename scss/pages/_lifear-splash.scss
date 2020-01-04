@@ -12,22 +12,25 @@
                          "Title1 Title1 Title1"
                          "Button1 Button1 ."
                          ". Button2 Button2"
-                         "Title2 Title2 Title2";
+                         "Title2 Title2 Title2"
+                         ". . .";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr 2fr 2fr 1fr;
+    grid-template-rows:1fr 1fr 2fr 2fr 1fr 1fr;
 
     justify-items: center;
     align-items: center;
 }
 .title{
     color:$blue;
-    font-size: 12vh;
+    font-size: 10vh;
+    line-height: 1.1em;
     text-align: center;
     margin: 3%;
     font-family: "Avenir Next", Helvetica;    
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: white;
 }
+
 #title1{
     grid-area: Title1;
 }
@@ -35,29 +38,63 @@
     grid-area: Title2;
 }
 
-@media screen and ( max-width:700px ){
-    .title{
-        font-size: 8vh;
-        -webkit-text-stroke-width: 2px;
-    }
-}
-@media screen and ( max-width:300px ){
-    .title{
-        font-size: 6vh;
-        -webkit-text-stroke-width: 1px;
-    }
-}
-#button1{
-    grid-area: Button1;
+.inverseButton{
     background-color:white;
     padding: 15px 0px;
     font-size: 2em;
     margin-right: 5%;
 }
+#button1{
+    grid-area: Button1;
+    
+}
 #button2{
     grid-area: Button2;
-    background-color:white;
-    padding: 15px 0px;
-    font-size: 2em;
-    margin-left: 5%;
+}
+
+@media screen and ( max-width:700px ){
+    .title{
+        font-size: 8vh;
+        -webkit-text-stroke-width: 2px;
+    }
+    .inverseButton{
+        padding: 15px 0px;
+        font-size: 1.7em;
+    }
+}
+@media screen and ( max-width:500px ){
+    .title{
+        font-size: 6vh;
+        -webkit-text-stroke-width: 2px;
+    }
+    .inverseButton{
+        padding: 7px 0px;
+        font-size: 1.5em;
+    }
+    #lifeARSplashContent{
+        grid-template-areas: ". . ."
+                         "Title1 Title1 Title1"
+                         "Button1 Button1 Button1"
+                         "Button2 Button2 Button2"
+                         "Title2 Title2 Title2"
+                         ". . .";
+    }
+}
+@media screen and ( max-width:300px ){
+    .title{
+        font-size: 4vh;
+        -webkit-text-stroke-width: 1px;
+    }
+    .inverseButton{
+        padding: 7px 0px;
+        font-size: 1em;
+    }
+    #lifeARSplashContent{
+        grid-template-areas: ". . ."
+                         "Title1 Title1 Title1"
+                         "Button1 Button1 Button1"
+                         "Button2 Button2 Button2"
+                         "Title2 Title2 Title2"
+                         ". . .";
+    }
 }

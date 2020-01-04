@@ -3,13 +3,41 @@
     border-radius: 35px;
     border: solid $blue 7px;
     margin: 4px;
-    padding: 4px;
-    height: 57vh;
-    &.custom{
-        height: 25vh; 
-    }
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .price, .priceAfter{
     text-align: center;
+}
+
+.planTitle{
+    background-color: $blue;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+}
+
+.description, .imgTarget, .vidTarget{
+    border-bottom: 1px solid #ccc;
+}
+.pricingTable p{
+    margin: 5px;
+}
+.pricingTable:focus, .pricingTable:hover{
+    box-shadow: grey 0px 0px 10px;
+}
+
+#included{
+    display: flex;
+}
+#included .planTitle{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    padding: 8px;
+    text-align: center; 
+    line-height: 11vh;
+}
+#included ul li{
+    text-align: left;
 }

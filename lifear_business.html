@@ -121,19 +121,19 @@
             <div class="Section" id="Pricing">
                 <h2 class="text-blue">Pricing</h2>
                 <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the database</p>
-                <div class="TwoColumnSection">
+                <div class="row">
                     <div id="pricingBasic"></div>
                     <div id="pricingSmall"></div>
                     <div id="pricingMedium"></div>
                     <div id="pricingLarge"></div>
                 </div>
                 <div id="pricingCustom"></div>
-                <div class="TwoColumnSection pricingTable custom">
-                    <h3 class="text-blue">Included:</h3>
+                <div id="included" class="pricingTable">
+                    <h3 class="planTitle">Included:</h3>
                     <ul>
-                        <li style="text-align: left;">Unlimited free swapping</li>
-                        <li style="text-align: left;">Saving and sharing options</li>
-                        <li style="text-align: left;">HTML and Button extras (displayed below the main content area)</li>
+                        <li>Unlimited free swapping</li>
+                        <li>Saving and sharing options</li>
+                        <li>HTML and Button extras (displayed below the main content area)</li>
                     </ul>
                 </div>
             </div>
@@ -179,7 +179,6 @@
             $('#pricingCustom .pricingTable .imgTarget').hide();
             $('#pricingCustom .pricingTable .vidTarget').hide();
             $("#pricingCustom .pricingTable .price").text("$100+");
-            $("#pricingCustom .pricingTable").addClass("custom");
         });
         $("#footer").load("html-elements/lifearFooter.html");
     </script>

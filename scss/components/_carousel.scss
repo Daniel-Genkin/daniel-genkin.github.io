@@ -1,20 +1,23 @@
 .slides {
     display: none;
-    max-height: 50vh;
-    min-height: 30vh;
-    max-width: 50vw;
+    height: 37vh;
+    max-width: 0vw;
     vertical-align: middle;
     align-content: center;
     border-radius: 50px;
     background-color: $backgroundColor;
     padding: 0px 30px;
+    overflow: hidden;//as we scale during the animation, the text leaks out of the box
+    &.red{
+        background-color: $backgroundColorRed;
+    }
 
-    transition: opacity 1s ease-in-out;
-
-        &.red{
-            background-color: $backgroundColorRed;
-        }
+    &.showing{
+        display:grid;
+        max-width: 50vw;
+    }
 }
+
 .carousel{
     width:100%;
     align-content: center;
@@ -30,7 +33,7 @@
     color: none;
     border: none;
     padding: 8px;
-    top: 3vh;
+    top: 10vh;
     position: absolute;
     outline: none;
 

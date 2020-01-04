@@ -418,21 +418,25 @@ h5 {
 
 .slides {
   display: none;
-  max-height: 50vh;
-  min-height: 30vh;
-  max-width: 50vw;
+  height: 37vh;
+  max-width: 0vw;
   vertical-align: middle;
   -ms-flex-line-pack: center;
       align-content: center;
   border-radius: 50px;
   background-color: #ecf8fe;
   padding: 0px 30px;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  overflow: hidden;
 }
 
 .slides.red {
   background-color: #feecec;
+}
+
+.slides.showing {
+  display: -ms-grid;
+  display: grid;
+  max-width: 50vw;
 }
 
 .carousel {
@@ -456,7 +460,7 @@ h5 {
   color: none;
   border: none;
   padding: 8px;
-  top: 3vh;
+  top: 10vh;
   position: absolute;
   outline: none;
 }
@@ -540,16 +544,51 @@ h5 {
   border-radius: 35px;
   border: solid #3f58e5 7px;
   margin: 4px;
-  padding: 4px;
-  height: 57vh;
-}
-
-.pricingTable.custom {
-  height: 25vh;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .price, .priceAfter {
   text-align: center;
+}
+
+.planTitle {
+  background-color: #3f58e5;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+}
+
+.description, .imgTarget, .vidTarget {
+  border-bottom: 1px solid #ccc;
+}
+
+.pricingTable p {
+  margin: 5px;
+}
+
+.pricingTable:focus, .pricingTable:hover {
+  -webkit-box-shadow: grey 0px 0px 10px;
+          box-shadow: grey 0px 0px 10px;
+}
+
+#included {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#included .planTitle {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+  padding: 8px;
+  text-align: center;
+  line-height: 11vh;
+}
+
+#included ul li {
+  text-align: left;
 }
 
 .headerLogo {
@@ -1288,11 +1327,11 @@ nav.red::before {
   right: 0;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 ." ". Button2 Button2" "Title2 Title2 Title2";
+      grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 ." ". Button2 Button2" "Title2 Title2 Title2" ". . .";
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 2fr 2fr 1fr;
-      grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+  -ms-grid-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1301,7 +1340,8 @@ nav.red::before {
 
 .title {
   color: #3f58e5;
-  font-size: 12vh;
+  font-size: 10vh;
+  line-height: 1.1em;
   text-align: center;
   margin: 3%;
   font-family: "Avenir Next", Helvetica;
@@ -1323,18 +1363,11 @@ nav.red::before {
   grid-area: Title2;
 }
 
-@media screen and (max-width: 700px) {
-  .title {
-    font-size: 8vh;
-    -webkit-text-stroke-width: 2px;
-  }
-}
-
-@media screen and (max-width: 300px) {
-  .title {
-    font-size: 6vh;
-    -webkit-text-stroke-width: 1px;
-  }
+.inverseButton {
+  background-color: white;
+  padding: 15px 0px;
+  font-size: 2em;
+  margin-right: 5%;
 }
 
 #button1 {
@@ -1342,10 +1375,6 @@ nav.red::before {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: Button1;
-  background-color: white;
-  padding: 15px 0px;
-  font-size: 2em;
-  margin-right: 5%;
 }
 
 #button2 {
@@ -1353,10 +1382,45 @@ nav.red::before {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: Button2;
-  background-color: white;
-  padding: 15px 0px;
-  font-size: 2em;
-  margin-left: 5%;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    font-size: 8vh;
+    -webkit-text-stroke-width: 2px;
+  }
+  .inverseButton {
+    padding: 15px 0px;
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 6vh;
+    -webkit-text-stroke-width: 2px;
+  }
+  .inverseButton {
+    padding: 7px 0px;
+    font-size: 1.5em;
+  }
+  #lifeARSplashContent {
+        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .title {
+    font-size: 4vh;
+    -webkit-text-stroke-width: 1px;
+  }
+  .inverseButton {
+    padding: 7px 0px;
+    font-size: 1em;
+  }
+  #lifeARSplashContent {
+        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
+  }
 }
 
 #carouselSection {
