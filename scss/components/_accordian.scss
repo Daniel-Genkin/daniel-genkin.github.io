@@ -1,5 +1,5 @@
 .entryParent{
-    background-color: transparent;
+    background-color: white;
     border-radius: 35px;
     border-style: solid;
     border-color: blue;
@@ -9,6 +9,7 @@
     color: blue;
     position: relative;
     background-color: white;
+    transition: all 0.2s ease-in-out;
 
     &::before {
         content: "-";
@@ -29,4 +30,7 @@
             content: "+";
         }
     }
+}
+.entryTitle{
+    margin-right: 2em;
 }

@@ -137,5 +137,14 @@
         column-gap: 12%;
     }
 }
+@media screen and (max-width: 700px){
+    .footer{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .socialButton{
+        width: 13vw;
+        height: 13vw;
+    }
+} 
 @include footerForColor("red",$red);
  

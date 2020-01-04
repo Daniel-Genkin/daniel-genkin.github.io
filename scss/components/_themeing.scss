@@ -4,18 +4,18 @@
     }
     .footer.#{$name}{
         @if $color == $red{
-            background-image: url(/Resources/universal/footer-red.svg);
+            background-image: url(../Resources/universal/footer-red.svg);
         } @else {
-            background-image: url(/Resources/universal/footer.svg);
+            background-image: url(../Resources/universal/footer.svg);
         }
     }
 }
 @mixin superFooterForColor($name, $color){
     .superFooter.#{$name}{
         @if $color == $red{
-            background-image: url(/Resources/universal/superFooter-red.svg);
+            background-image: url(../Resources/universal/superFooter-red.svg);
         } @else {
-            background-image: url(/Resources/universal/superFooter.svg);
+            background-image: url(../Resources/universal/superFooter.svg);
         }
     }
 }
@@ -34,9 +34,9 @@
 
     nav.#{$name}::before{
         @if $color == $red{
-            background-image: url(/Resources/universal/menu-red.svg);
+            background-image: url(../Resources/universal/menu-red.svg);
         } @else {
-            background-image: url(/Resources/universal/menu.svg);
+            background-image: url(../Resources/universal/menu.svg);
         }
     }
     @media screen and (max-width: 500px){

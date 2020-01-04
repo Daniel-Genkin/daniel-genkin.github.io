@@ -54,11 +54,11 @@
         <!-- image carousel section -->
         <div id="imageCarousel"></div>
         <div class="TwoColumnSection">
-            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/1.png">
-            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/2.png">
-            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/3.png">
-            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/4.png">
-            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/5.png">
+            <img class="icon small doohickey" src="Resources/pages/slappy-sandwich/doohickeys/1.png">
+            <img class="icon small doohickey" src="Resources/pages/slappy-sandwich/doohickeys/2.png">
+            <img class="icon small doohickey" src="Resources/pages/slappy-sandwich/doohickeys/3.png">
+            <img class="icon small doohickey" src="Resources/pages/slappy-sandwich/doohickeys/4.png">
+            <img class="icon small doohickey" src="Resources/pages/slappy-sandwich/doohickeys/5.png">
         </div>
     </div>
     <div id="footer"></div>
@@ -69,8 +69,8 @@
             $(".carousel").addClass("red");
             $(".arrow").addClass("red");
             $(".carousel").append("<video id=\"firstSlide\" class=\"video slides red\" controls><source src=\"Resources/pages/slappy-sandwich/slappysandwichpromo.mp4\" type=\"video/mp4\">Video not supported</video>");
-            $("#firstSlide").show();
-            $(".carousel").append("<img class=\"slides red\" src=\"..Resources/pages/slappy-sandwich/promoGame.jpg\">")
+            $("#firstSlide").css( "display", "grid" );
+            $(".carousel").append("<img class=\"slides red\" src=\"Resources/pages/slappy-sandwich/promoGame.jpg\">")
             .append("<img class=\"slides red\" src=\"Resources/pages/slappy-sandwich/promoRules.jpg\">")
             .append("<img class=\"slides red\" src=\"Resources/pages/slappy-sandwich/promoLast.jpg\">");
         });

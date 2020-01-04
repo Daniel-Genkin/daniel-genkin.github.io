@@ -6,7 +6,7 @@
 @import "components/mixins";
 @import "components/themeing";
 @import "components/classes";
-@import "components/page_elements";
+@import "components/page-elements";
 @import "components/carousel";
 @import "components/accordian";
 @import "components/pricing-table";
@@ -14,10 +14,11 @@
 @import "sections/header";
 @import "sections/nav";
 @import "sections/footer";
-@import "sections/superFooter";
+@import "sections/super-footer";
 
 @import "pages/portfolio";
-@import "pages/lifear_splash";
+@import "pages/lifear-splash";
 @import "pages/lifear-faq";
 @import "pages/lifear-gallery";
-@import "pages/lifear_info_pages";
+@import "pages/lifear-info-pages";
+@import "pages/slappy-sandwich";

@@ -246,7 +246,7 @@ h5 {
   width: auto;
   min-height: 50px;
   margin-right: 25px;
-  background-image: url(/Resources/pages/index/circle-img-holder.svg);
+  background-image: url(../Resources/pages/index/circle-img-holder.svg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2vmin;
@@ -403,13 +403,13 @@ h5 {
   padding-right: 5%;
   padding-left: 5%;
   z-index: 0;
-  background-image: url(/Resources/universal/randomShapes.svg);
+  background-image: url(../Resources/universal/randomShapes.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
 #contents.red {
-  background-image: url(/Resources/universal/randomShapesRed.svg);
+  background-image: url(../Resources/universal/randomShapesRed.svg);
 }
 
 #footer {
@@ -495,7 +495,7 @@ h5 {
 }
 
 .entryParent {
-  background-color: transparent;
+  background-color: white;
   border-radius: 35px;
   border-style: solid;
   border-color: blue;
@@ -505,6 +505,8 @@ h5 {
   color: blue;
   position: relative;
   background-color: white;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .entryParent::before {
@@ -527,6 +529,10 @@ h5 {
 
 .entryParent.closed::before {
   content: "+";
+}
+
+.entryTitle {
+  margin-right: 2em;
 }
 
 .pricingTable {
@@ -922,7 +928,7 @@ nav::before {
 }
 
 nav.red::before {
-  background-image: url(/Resources/universal/menu-red.svg);
+  background-image: url(../Resources/universal/menu-red.svg);
 }
 
 @media screen and (max-width: 500px) {
@@ -1115,12 +1121,23 @@ nav.red::before {
           column-gap: 12%;
 }
 
+@media screen and (max-width: 700px) {
+  .footer {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  .socialButton {
+    width: 13vw;
+    height: 13vw;
+  }
+}
+
 .socialButton.red {
   border: 4px solid #e53f3f;
 }
 
 .footer.red {
-  background-image: url(/Resources/universal/footer-red.svg);
+  background-image: url(../Resources/universal/footer-red.svg);
 }
 
 .footerIcon {
@@ -1147,7 +1164,7 @@ nav.red::before {
 }
 
 .superFooter.red {
-  background-image: url(/Resources/universal/superFooter-red.svg);
+  background-image: url(../Resources/universal/superFooter-red.svg);
 }
 
 #testimonialSection {
@@ -1359,7 +1376,7 @@ nav.red::before {
 }
 
 #ActivismSection {
-  background-image: url(/..Resources/pages/lifear/lifear_activism_background2.svg);
+  background-image: url(../Resources/pages/lifear/lifear_activism_background2.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-left: -5.5%;
@@ -1417,5 +1434,11 @@ nav.red::before {
 .lifearColumn.last {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media screen and (max-width: 700px) {
+  .doohickey:nth-child(5) {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
