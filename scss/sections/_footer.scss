@@ -5,19 +5,19 @@
 }
 .area1{
     grid-area: area1;
-    background-image: url(../Resources/universal/linkedin.svg);
+    background-image: url(Resources/universal/linkedin.svg);
 }
 .area2{
     grid-area: area2;
-    background-image: url(../Resources/universal/facebook.svg);
+    background-image: url(Resources/universal/facebook.svg);
 }
 .area3{
     grid-area: area3;
-    background-image: url(../Resources/universal/twitter.svg);
+    background-image: url(Resources/universal/twitter.svg);
 }
 .area4{
     grid-area: area4;
-    background-image: url(../Resources/universal/mail.svg);
+    background-image: url(Resources/universal/mail.svg);
 }
 .superFooter{
     grid-area: superFooter;
@@ -118,7 +118,7 @@
     margin: 0;
     width:100%;
     height: 50%;
-    background-image: url(../Resources/universal/footer.svg);
+    background-image: url(Resources/universal/footer.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 

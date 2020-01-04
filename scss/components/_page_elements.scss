@@ -11,12 +11,12 @@
     padding-right: 5%;
     padding-left: 5%;
     z-index: 0;
-    background-image: url(../Resources/universal/randomShapes.svg);
+    background-image: url(Resources/universal/randomShapes.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
     &.red{
-        background-image: url(../Resources/universal/randomShapesRed.svg);
+        background-image: url(Resources/universal/randomShapesRed.svg);
     }
 }
 #footer{
