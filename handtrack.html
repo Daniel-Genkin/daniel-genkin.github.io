@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DGApps - HandTrack</title>
-    <link rel="shortcut icon" type="image/png" href="/Resources/universal/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
 </head>
 <body>
     <!-- template -->
@@ -15,7 +15,7 @@
     <script >
         $("#header").load("html-elements/header.html",function() {
             $(".headerTitle").text("HandTrack");
-            $(".headerImage").attr("src","/Resources/pages/handtrack/HandTrackLogo.png");
+            $(".headerImage").attr("src","Resources/pages/handtrack/HandTrackLogo.png");
             $(".headerLogo").remove();
             $(".headerSubtitle").remove();
         });
@@ -41,9 +41,9 @@
             <a href="https://play.google.com/store/apps/details?id=com.daniel.apps.handtrack&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img style="max-width:60%;max-height:60%;" alt="Get it on Google Play" src="https://static1.squarespace.com/static/57312a1762cd9460fe950dcd/t/57e4c32b8419c29418b8eca2/1479858951966/"></a>
             <p style="text-align:left; margin-left:16%;"><strong>2.</strong> Download and Run (no install required) HandTrack server from the buttons below.</pstyle="text-align:left; margin-left:16%;">
             <div class="TwoColumns">
-                <a class="button btn-blue" href="/Resources/pages/handtrack/WINDOWSHandTrackServer.jar" download>Windows</a>
-                <a class="button btn-blue" href="/Resources/pages/handtrack/MACServer.jar" download>MacOS</a>
-                <a class="button btn-blue" href="/Resources/pages/handtrack/LinuxServer.jar" download>Linux</a>
+                <a class="button btn-blue" href="Resources/pages/handtrack/WINDOWSHandTrackServer.jar" download>Windows</a>
+                <a class="button btn-blue" href="Resources/pages/handtrack/MACServer.jar" download>MacOS</a>
+                <a class="button btn-blue" href="Resources/pages/handtrack/LinuxServer.jar" download>Linux</a>
             </div>
             <p style="text-align:left; margin-left:16%;">
                 <strong>3.</strong> Open the server app<br>
@@ -66,16 +66,16 @@
             
             $(".carousel").addClass("blue");
             $(".arrow").addClass("blue");
-            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides\" controls><source src=\"/Resources/pages/handtrack/website.mp4\" type=\"video/mp4\">Video not supported</video>");
+            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides\" controls><source src=\"Resources/pages/handtrack/website.mp4\" type=\"video/mp4\">Video not supported</video>");
             $("#firstSlide").show();
-            $(".carousel").append("<video class=\"video slides\" controls><source src=\"/Resources/pages/handtrack/wear.mp4\" type=\"video/mp4\">Video not supported</video>");
+            $(".carousel").append("<video class=\"video slides\" controls><source src=\"Resources/pages/handtrack/wear.mp4\" type=\"video/mp4\">Video not supported</video>");
         
-            $(".carousel").append("<img class=\"slides\" src=\"/Resources/pages/handtrack/airmouse.png\">")
-                          .append("<img class=\"slides\" src=\"/Resources/pages/handtrack/joystick.png\">")
-                          .append("<img class=\"slides\" src=\"/Resources/pages/handtrack/settings.png\">")
-                          .append("<img class=\"slides\" src=\"/Resources/pages/handtrack/watch_airmouse.png\">")
-                          .append("<img class=\"slides\" src=\"/Resources/pages/handtrack/watch_joystick.png\">")
-                          .append("<img class=\"slides\" src=\"/Resources/pages/handtrack/featureImg.png\">");
+            $(".carousel").append("<img class=\"slides\" src=\"Resources/pages/handtrack/airmouse.png\">")
+                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/joystick.png\">")
+                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/settings.png\">")
+                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/watch_airmouse.png\">")
+                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/watch_joystick.png\">")
+                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/featureImg.png\">");
         });
         $("#footer").load("html-elements/oneAppFooter.html", function(){
             $(".footer").addClass("blue");
