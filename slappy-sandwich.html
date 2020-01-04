@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DGApps - Slappy Sandwich</title>
-    <link rel="shortcut icon" type="image/png" href="..Resources/universal/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
 </head>
 <body>
     <!-- template -->
@@ -15,7 +15,7 @@
     <script >
         $("#header").load("html-elements/header.html",function() {
             $(".headerTitle").text("Slappy Sandwich");
-            $(".headerImage").attr("src","..Resources/pages/slappy-sandwich/app_slappysandwich.png");
+            $(".headerImage").attr("src","Resources/pages/slappy-sandwich/app_slappysandwich.png");
             $(".headerLogo").remove();
             $(".headerSubtitle").remove();
             
@@ -54,11 +54,11 @@
         <!-- image carousel section -->
         <div id="imageCarousel"></div>
         <div class="TwoColumnSection">
-            <img class="icon small" src="..Resources/pages/slappy-sandwich/doohickeys/1.png">
-            <img class="icon small" src="..Resources/pages/slappy-sandwich/doohickeys/2.png">
-            <img class="icon small" src="..Resources/pages/slappy-sandwich/doohickeys/3.png">
-            <img class="icon small" src="..Resources/pages/slappy-sandwich/doohickeys/4.png">
-            <img class="icon small" src="..Resources/pages/slappy-sandwich/doohickeys/5.png">
+            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/1.png">
+            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/2.png">
+            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/3.png">
+            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/4.png">
+            <img class="icon small" src="Resources/pages/slappy-sandwich/doohickeys/5.png">
         </div>
     </div>
     <div id="footer"></div>
@@ -68,11 +68,11 @@
             
             $(".carousel").addClass("red");
             $(".arrow").addClass("red");
-            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides red\" controls><source src=\"..Resources/pages/slappy-sandwich/slappysandwichpromo.mp4\" type=\"video/mp4\">Video not supported</video>");
+            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides red\" controls><source src=\"Resources/pages/slappy-sandwich/slappysandwichpromo.mp4\" type=\"video/mp4\">Video not supported</video>");
             $("#firstSlide").show();
             $(".carousel").append("<img class=\"slides red\" src=\"..Resources/pages/slappy-sandwich/promoGame.jpg\">")
-            .append("<img class=\"slides red\" src=\"..Resources/pages/slappy-sandwich/promoRules.jpg\">")
-            .append("<img class=\"slides red\" src=\"..Resources/pages/slappy-sandwich/promoLast.jpg\">");
+            .append("<img class=\"slides red\" src=\"Resources/pages/slappy-sandwich/promoRules.jpg\">")
+            .append("<img class=\"slides red\" src=\"Resources/pages/slappy-sandwich/promoLast.jpg\">");
         });
         $("#footer").load("html-elements/twoAppFooter.html", function(){
             $(".footer").addClass("red");
