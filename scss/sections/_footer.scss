@@ -1,7 +1,7 @@
 .connectText{
     grid-area: connect;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .area1{
     grid-area: area1;
@@ -44,12 +44,16 @@
         h2{
             transition: font-size 0.2s ease-in-out;
         }
+
+        img{
+            max-height: 100px;
+        }
     }
 
     &.noBackground{
         background-color: transparent;
         border: none;
-        width: auto;
+        // width: auto;
         border-radius: 15px;
     }
 }

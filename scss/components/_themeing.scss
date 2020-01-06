@@ -42,6 +42,7 @@
     @media screen and (max-width: 500px){
         nav.#{$name}::before {
             background-color: $color;
+            background-image: unset;
         }
     }
 }
