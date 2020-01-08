@@ -32,31 +32,38 @@
     background-position: center;
     border: 4px solid $blue;
     transition: background-size 0.2s ease-in-out;
+}
 
-    &.large{
-        width: 100%;
-        height: 10vh;
-        grid-column-start: area1;
-        grid-column-end: area4;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h2{
-            transition: font-size 0.2s ease-in-out;
-        }
-
-        img{
-            max-height: 100px;
-        }
+.actionButton{
+    width: 100%;
+    height: 10vh;
+    grid-column-start: area1;
+    grid-column-end: area4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid $blue;
+    h2{
+        transition: font-size 0.2s ease-in-out;
     }
 
+    img{
+        max-height: 100px;
+    }
     &.noBackground{
         background-color: transparent;
         border: none;
-        // width: auto;
         border-radius: 15px;
     }
+    &.background{
+        background-color: white;
+        border-radius: 50vh;
+    }
 }
+
 .semi-large{
     width: 100%;
     height: 10vh;
@@ -106,7 +113,7 @@
     background-size: 75% 75%;
 }
 
-.semi-large:hover, .semi-large2:hover,.semi-large:focus, .semi-large2:focus, .socialButton.large:hover, .socialButton.large:focus{
+.semi-large:hover, .semi-large2:hover,.semi-large:focus, .semi-large2:focus, .socialButton:hover, .socialButton:focus, .actionButton:hover, .actionButton:focus{
     background-color: $backgroundColor;
     &.noBackground{
         background-color: transparent;

@@ -14,6 +14,7 @@
   <script>
     $("#header").load("html-elements/header.html", function () {
       $(".header").addClass("tall");
+      $(".headerImage").addClass("noMax");
       $(".headerTitle").css({ "margin-top": "0px" });
     });
   </script>
@@ -56,13 +57,13 @@
     <div id="PastClientSection" class="Section">
       <h2 class="text-yellow">Some Past Clients</h2>
       <div class="row">
-        <div class="rowItem withBorder"><img class="icon" src="Resources/universal/logo.png">
-          <h3 class="text-blue">Brock University CCOVI</h3>
+        <div class="rowItem withBorder"><img class="icon withBackground" src="Resources/pages/index/crystalClear.png">
+          <h3 class="text-blue">Crystal Clear Goal Setting</h3>
         </div>
-        <div class="rowItem withBorder"><img class="icon" src="Resources/universal/logo.png">
+        <div class="rowItem withBorder"><img class="icon withBackground" src="Resources/pages/index/powersuit.png">
           <h3 class="text-blue">Powersuit Corp.</h3>
         </div>
-        <div class="rowItem withBorder"><img class="icon" src="Resources/universal/logo.png">
+        <div class="rowItem withBorder"><img class="icon withBackground" src="Resources/pages/index/SELC.png">
           <h3 class="text-blue">Science Education and Local Communities</h3>
         </div>
       </div>

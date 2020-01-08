@@ -38,9 +38,24 @@
         </div>
         <!-- Testimonial section -->
         <div id="testimonialSection" class="row section">
-            <div class="rowItem withBorder testimonial-authorA"><p class="text-blue">Lorem ipsum fgfdg  gf g fdg   gdfg d gfg ffg gdgfgdfgdfgdg</p></div>
-            <div class="rowItem withBorder testimonial-authorB"><p class="text-blue">Lorem ipsum fgfdg  gf g fdg   gdfg d gfg ffg gdgfgdfgdfgdg</p></div>
-            <div class="rowItem withBorder testimonial-authorC"><p class="text-blue">Lorem ipsum fgfdg  gf g fdg   gdfg d gfg ffg gdgfgdfgdfgdg</p></div>
+            <div class="rowItem withBorder testimonial">
+                <p class="text-blue">Daniel managed in 2 days to do what the co-founder and I couldn't do in 2 months</p>
+                <h4 class="testimonial-author">Mel Gencer</h4>
+                <h5 
+                class="testimonial-author-title">Co-Founder of HoloEducate Inc.</h5>
+            </div>
+            <!-- <div class="rowItem withBorder testimonial">
+                <p class="text-blue">Daniel managed in 2 days to do what the co-founder and I couldn't do in 2 months</p>
+                <h4 class="testimonial-author">Mel Gencer</h4>
+                <h5 
+                class="testimonial-author-title">Co-Founder of HoloEducate Inc.</h5>
+            </div>
+            <div class="rowItem withBorder testimonial">
+                <p class="text-blue">Daniel managed in 2 days to do what the co-founder and I couldn't do in 2 months</p>
+                <h4 class="testimonial-author">Mel Gencer</h4>
+                <h5 
+                class="testimonial-author-title">Co-Founder of HoloEducate Inc.</h5>
+            </div> -->
         </div>
         <div id="appSection">
             <!-- featured projects section -->
@@ -114,7 +129,9 @@
     <div id="footer"></div>
     <div id="superFooter"></div>
     <script>
-        $("#footer").load("html-elements/actionFooter.html");
+        $("#footer").load("html-elements/actionFooter.html", function(){
+            $(".actionButton").addClass("background");
+        });
         $("#superFooter").load("html-elements/superFooter.html");
     </script>
     <!-- main content ends -->

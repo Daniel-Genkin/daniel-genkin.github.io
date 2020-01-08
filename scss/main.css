@@ -313,6 +313,14 @@ h5 {
   margin-right: 25px;
 }
 
+.icon.withBackground {
+  background-color: #e3f0f6;
+  margin: 10px;
+  border-radius: 50%;
+  padding: 10px;
+  width: 85%;
+}
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -429,7 +437,6 @@ h5 {
 
 .slides {
   display: none;
-  height: 37vh;
   max-width: 0vw;
   vertical-align: middle;
   -ms-flex-line-pack: center;
@@ -438,6 +445,8 @@ h5 {
   background-color: #ecf8fe;
   padding: 0px 30px;
   overflow: hidden;
+  font-size: 3.4vmin;
+  min-height: 45vh;
 }
 
 .slides.red {
@@ -451,6 +460,7 @@ h5 {
 }
 
 .carousel {
+  min-height: 45vh;
   width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -463,15 +473,20 @@ h5 {
   display: flex;
 }
 
+@media screen and (max-width: 400px) {
+  .carousel {
+    margin-bottom: 25px;
+  }
+}
+
 .slideButton {
   width: 10vw;
-  height: 10vw;
+  height: 100%;
   min-width: 50px;
   background: none;
   color: none;
   border: none;
   padding: 8px;
-  top: 10vh;
   position: absolute;
   outline: none;
 }
@@ -558,6 +573,11 @@ h5 {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 250px;
+}
+
+.pricingTable.custom {
+  width: 100%;
 }
 
 .price, .priceAfter {
@@ -573,6 +593,13 @@ h5 {
 
 .description, .imgTarget, .vidTarget {
   border-bottom: 1px solid #ccc;
+}
+
+.description {
+  display: table-cell;
+  vertical-align: middle;
+  height: 8vh;
+  padding: 2px 5px;
 }
 
 .pricingTable p {
@@ -636,8 +663,8 @@ h5 {
 }
 
 .headerImage {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 2;
   grid-area: Image;
   width: 100%;
@@ -646,6 +673,11 @@ h5 {
   max-width: 50vh;
   margin-right: 5%;
   min-width: 120px;
+}
+
+.headerImage.noMax {
+  max-width: unset;
+  max-height: 70vh;
 }
 
 .header {
@@ -670,6 +702,7 @@ h5 {
 
 .header.tall {
   height: 85vh;
+      grid-template-areas: "Logo Image" "Title Image" "Subtitle Image" ". Image";
 }
 
 .header.red {
@@ -753,8 +786,6 @@ h5 {
   top: 14px;
   right: 15px;
   z-index: 40;
-  width: 24px;
-  height: 24px;
   margin: 0;
   padding: 0;
   -webkit-transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -764,6 +795,10 @@ h5 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  opacity: 0.8;
+}
+
+.burger:hover, .burger:focus {
   opacity: 1;
 }
 
@@ -1033,7 +1068,7 @@ nav.red::before {
   transition: background-size 0.2s ease-in-out;
 }
 
-.socialButton.large {
+.actionButton {
   width: 100%;
   height: 10vh;
   -ms-grid-column: area1;
@@ -1048,21 +1083,30 @@ nav.red::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid #3f58e5;
 }
 
-.socialButton.large h2 {
+.actionButton h2 {
   -webkit-transition: font-size 0.2s ease-in-out;
   transition: font-size 0.2s ease-in-out;
 }
 
-.socialButton.large img {
+.actionButton img {
   max-height: 100px;
 }
 
-.socialButton.noBackground {
+.actionButton.noBackground {
   background-color: transparent;
   border: none;
   border-radius: 15px;
+}
+
+.actionButton.background {
+  background-color: white;
+  border-radius: 50vh;
 }
 
 .semi-large {
@@ -1125,15 +1169,15 @@ nav.red::before {
   background-size: 75% 75%;
 }
 
-.semi-large:hover, .semi-large2:hover, .semi-large:focus, .semi-large2:focus, .socialButton.large:hover, .socialButton.large:focus {
+.semi-large:hover, .semi-large2:hover, .semi-large:focus, .semi-large2:focus, .socialButton:hover, .socialButton:focus, .actionButton:hover, .actionButton:focus {
   background-color: #ecf8fe;
 }
 
-.semi-large:hover.noBackground, .semi-large2:hover.noBackground, .semi-large:focus.noBackground, .semi-large2:focus.noBackground, .socialButton.large:hover.noBackground, .socialButton.large:focus.noBackground {
+.semi-large:hover.noBackground, .semi-large2:hover.noBackground, .semi-large:focus.noBackground, .semi-large2:focus.noBackground, .socialButton:hover.noBackground, .socialButton:focus.noBackground, .actionButton:hover.noBackground, .actionButton:focus.noBackground {
   background-color: transparent;
 }
 
-.semi-large:hover h2, .semi-large2:hover h2, .semi-large:focus h2, .semi-large2:focus h2, .socialButton.large:hover h2, .socialButton.large:focus h2 {
+.semi-large:hover h2, .semi-large2:hover h2, .semi-large:focus h2, .semi-large2:focus h2, .socialButton:hover h2, .socialButton:focus h2, .actionButton:hover h2, .actionButton:focus h2 {
   font-weight: bolder;
   font-size: calc(28px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
@@ -1181,6 +1225,10 @@ nav.red::before {
   border: 4px solid #e53f3f;
 }
 
+.actionButton.red {
+  border: 4px solid #e53f3f;
+}
+
 .footer.red {
   background-image: url(../Resources/universal/footer-red.svg);
 }
@@ -1220,14 +1268,16 @@ nav.red::before {
   padding-top: 40px;
 }
 
-.testimonial-authorA {
+.testimonial {
   text-align: center;
   margin: 8px;
   border: solid white 5px;
   padding: 8px;
+  -webkit-box-shadow: #cdcdcd 0px 0px 25px;
+          box-shadow: #cdcdcd 0px 0px 25px;
 }
 
-.testimonial-authorA::before {
+.testimonial::before {
   content: "\"";
   width: 100%;
   display: inherit;
@@ -1242,83 +1292,23 @@ nav.red::before {
   height: 1em;
 }
 
-.testimonial-authorA::after {
-  content: "-author";
+.testimonial-author {
   width: 100%;
-  left: 15%;
   color: rgba(0, 0, 0, 0.4);
-  text-align: start;
+  text-align: center;
   position: relative;
   display: inherit;
   padding-top: 25px;
-  padding-bottom: 25px;
+  margin-bottom: 0;
 }
 
-.testimonial-authorB {
-  text-align: center;
-  margin: 8px;
-  border: solid white 5px;
-  padding: 8px;
-}
-
-.testimonial-authorB::before {
-  content: "\"";
+.testimonial-author-title {
   width: 100%;
-  display: inherit;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  color: black;
+  color: rgba(0, 0, 0, 0.3);
   text-align: center;
-  font-size: xxx-large;
-  font-style: oblique;
-  font-weight: bolder;
-  height: 1em;
-}
-
-.testimonial-authorB::after {
-  content: "-author";
-  width: 100%;
-  left: 15%;
-  color: rgba(0, 0, 0, 0.4);
-  text-align: start;
   position: relative;
   display: inherit;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.testimonial-authorC {
-  text-align: center;
-  margin: 8px;
-  border: solid white 5px;
-  padding: 8px;
-}
-
-.testimonial-authorC::before {
-  content: "\"";
-  width: 100%;
-  display: inherit;
-  position: relative;
-  z-index: 1;
-  top: 0;
-  color: black;
-  text-align: center;
-  font-size: xxx-large;
-  font-style: oblique;
-  font-weight: bolder;
-  height: 1em;
-}
-
-.testimonial-authorC::after {
-  content: "-author";
-  width: 100%;
-  left: 15%;
-  color: rgba(0, 0, 0, 0.4);
-  text-align: start;
-  position: relative;
-  display: inherit;
-  padding-top: 25px;
+  padding-top: 5px;
   padding-bottom: 25px;
 }
 

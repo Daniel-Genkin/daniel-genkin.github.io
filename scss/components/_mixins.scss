@@ -16,39 +16,6 @@
 @include btnCreator("teal", $teal);
 @include btnCreator("red", $red);
 
-@mixin testimonialGenerator($author) {
-    .testimonial-#{$author}{
-        text-align: center;
-        margin: 8px;
-        border: solid white 5px;
-        padding: 8px;
-    }
-    .testimonial-#{$author}::before{
-        content: "\"";
-        width: 100%;
-        display: inherit;
-        position: relative;
-        z-index: 1;
-        top: 0;
-        color: black;
-        text-align: center;
-        font-size: xxx-large;
-        font-style: oblique;
-        font-weight: bolder;
-        height: 1em;
-    }
-    .testimonial-#{$author}::after{
-        content: "-#{author}";
-        width: 100%;
-        left: 15%;
-        color: rgba($color: black, $alpha: 0.4);
-        text-align: start;
-        position: relative;
-        display: inherit;
-        padding-top: 25px;
-        padding-bottom: 25px;
-    }
-}
 @mixin createColoredAppButton($name, $color){
     .appButton.#{$name}-border{
       border: 7px solid $color;

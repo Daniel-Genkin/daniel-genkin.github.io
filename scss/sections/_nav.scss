@@ -43,8 +43,6 @@
   top: 14px;
   right: 15px;
   z-index: 40;
-  width: 24px;
-  height: 24px;
   margin: 0;
   padding: 0;
   transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1); 
@@ -55,8 +53,13 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  opacity: 0.8;
+}
+
+.burger:hover, .burger:focus{
   opacity: 1;
 }
+
 .menuLabel .burger::before,
 .bar, .menuLabel .burger::after {
   position: fixed;

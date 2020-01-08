@@ -2,6 +2,9 @@
     .socialButton.#{$name}{
         border: 4px solid $color; 
     }
+    .actionButton.#{$name}{
+        border: 4px solid $color; 
+    }
     .footer.#{$name}{
         @if $color == $red{
             background-image: url(../Resources/universal/footer-red.svg);

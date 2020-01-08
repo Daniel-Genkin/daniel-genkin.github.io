@@ -1,3 +1,23 @@
+<script>
+    function createPricingTable(element, title, description, numImgs, numVids, price, isCustom){
+        let target = $(element).find(".pricingTable");
+
+        target.find(".planTitle").text(title);
+        target.find(".description").text(description);
+        target.find(".price").text(price);
+
+        if (isCustom){
+            target.find(".numImgs").hide();
+            target.find(".numVids").hide();
+            target.find(".imgTarget").hide();
+            target.find(".vidTarget").hide();
+            target.addClass("custom");
+        }else{
+            target.find(".numImgs").text(numImgs);
+            target.find(".numVids").text(numVids);
+        }
+    }
+</script>
 <div class="pricingTable">
     <h2 class="planTitle text-blue">The Blah Plan</h2>
     <p class="description">blah blah blah</p>

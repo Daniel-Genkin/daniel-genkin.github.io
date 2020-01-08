@@ -29,6 +29,11 @@
     max-width: 50vh;
     margin-right: 5%;
     min-width: 120px;
+
+    &.noMax{
+        max-width: unset; 
+        max-height: 70vh;
+    }
 }
 .header{
     margin: 0;
@@ -51,6 +56,10 @@
 
     &.tall{
         height: 85vh; 
+        grid-template-areas: "Logo Image"
+        "Title Image"
+        "Subtitle Image"
+        ". Image";
     }
     &.red{
         background-image: url(../Resources/universal/header-red.svg);

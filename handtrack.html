@@ -63,18 +63,17 @@
     <div id="superFooter"></div>
     <script>
         $("#imageCarousel").load("html-elements/carousel.html", function(){
-            
-            $(".carousel").addClass("blue");
-            $(".arrow").addClass("blue");
-            $(".carousel").append("<video id=\"firstSlide\" class=\"video slides\" controls><source src=\"Resources/pages/handtrack/website.mp4\" type=\"video/mp4\">Video not supported</video>");
-                $("#firstSlide").addClass("showing");
-            $(".carousel").append("<video class=\"video slides\" controls><source src=\"Resources/pages/handtrack/wear.mp4\" type=\"video/mp4\">Video not supported</video>");
-            $(".carousel").append("<img class=\"slides\" src=\"Resources/pages/handtrack/airmouse.png\">")
-                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/joystick.png\">")
-                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/settings.png\">")
-                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/watch_airmouse.png\">")
-                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/watch_joystick.png\">")
-                          .append("<img class=\"slides\" src=\"Resources/pages/handtrack/featureImg.png\">");
+            $("#imageCarousel").load("html-elements/carousel.html", function(){
+            createCarousel("blue",[
+                "<video class=\"video slides\" controls><source src=\"Resources/pages/handtrack/website.mp4\" type=\"video/mp4\">Video not supported</video>",
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/airmouse.png\">",  
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/joystick.png\">",
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/settings.png\">",
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/watch_airmouse.png\">",
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/watch_joystick.png\">",
+                "<img class=\"slides\" src=\"Resources/pages/handtrack/featureImg.png\">"
+            ]);
+        });
         });
         $("#footer").load("html-elements/oneAppFooter.html", function(){
             $(".footer").addClass("blue");

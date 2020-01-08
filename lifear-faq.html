@@ -32,51 +32,25 @@
     <div id="footer"></div>
     <div id="superFooter"></div>
     <script>
+
         $("#accordian").load("html-elements/accordian.html", function(){
+            createAccordian([
+                ["The Discover AR button doesn't let me enter the scanning screen","Please make sure that you have a stable internet connection. LifeAR needs to connect to a few servers to offer its services, so a strong connection is necessary."],
+                ["When I click Discover AR I see a message that LifeAR can't connect to its servers", "If you see this message, it means that LifeAR's servers are temporarily down. Please be patient while our team fixes the problem."],
+                ["How I do add my own content to LifeAR","To start adding your own content, please open the app. Then click on the menu in the top right hand corner of the title screen and select Manage Your Content. Then you will be prompted to make an account and upload your content. For more information about adding your own content into LifeAR, please click <a href=\"lifear_business.html#AddingTargets\">here</a>."],
+                ["I can't add any more targets, all the options are greyed out","Please login to your target management portal in the app and select the Prepay Content button and select which content you wish to purchase."]
+            ]);
             $(".accordian").addClass("blue");
-            $(".accordian").append(
-                "<div class=\"entryParent closed\" onclick=\"toggle(this);\">" +
-                "    <h2 class=\"entryTitle\">The Discover AR button doesn't let me enter the scanning screen</h2>"+
-                "    <div class=\"entryDescription\">"+
-                "        <p>Please make sure that you have a stable internet connection. LifeAR needs to connect to a few servers to offer its services, so a strong connection is necessary.</p>"+
-                "    </div>"+
-                " </div>"
-            ).append(
-                "<div class=\"entryParent closed\" onclick=\"toggle(this);\">" +
-                "    <h2 class=\"entryTitle\">When I click Discover AR I see a message that LifeAR can't connect to its servers</h2>"+
-                "    <div class=\"entryDescription\">"+
-                "        <p>If you see this message, it means that LifeAR's servers are temporarily down. Please be patient while our team fixes the problem.</p>"+
-                "    </div>"+
-                " </div>"
-            ).append(
-                "<div class=\"entryParent closed\" onclick=\"toggle(this);\">" +
-                "    <h2 class=\"entryTitle\">How I do add my own content to LifeAR</h2>"+
-                "    <div class=\"entryDescription\">"+
-                "        <p>To start adding your own content, please open the app. Then click on the menu in the top right hand corner of the title screen and select Manage Your Content. Then you will be prompted to make an account and upload your content. For more information about adding your own content into LifeAR, please click <a href=\"lifear_business.html#AddingTargets\">here</a>. </p>"+
-                "    </div>"+
-                " </div>"
-            ).append(
-                "<div class=\"entryParent closed\" onclick=\"toggle(this);\">" +
-                "    <h2 class=\"entryTitle\">I can't add any more targets, all the options are greyed out</h2>"+
-                "    <div class=\"entryDescription\">"+
-                "        <p>Please login to your target management portal in the app and select the Prepay Content button and select which content you wish to purchase.</p>"+
-                "    </div>"+
-                " </div>"
-            );
         });
 
         $("#imageCarousel").load("html-elements/carousel.html", function(){
-            
-            $(".carousel").addClass("blue");
-            $(".arrow").addClass("blue");
-
-            $(".carousel").append("<h2 id=\"firstSlide\" class=\"slides\">For best results, please make sure that the image is clear and big enough in your viewfinder</h2>");
-            $("#firstSlide").addClass("showing");
-            $(".carousel").append("<h2 class=\"slides\">If it is too dark, turn on the flashlight (white menu in bottom right corner of the screen and click the flashlight)</h2>")
-                          .append("<h2 class=\"slides\">If you want to see something up close, pinch your fingers on the screen too zoom</h2>")
-                          .append("<h2 class=\"slides\">If you want to watch a longer video but don't want to see it in AR, click the fullscreen button (in the white menu in the right bottom corner of the screen)</h2>")
-                          .append("<h2 class=\"slides\">You can share anything you find with your friends by clicking the share button in the menu located in the bottom right hand corner of your screen</h2>")
-                          .append("<h2 class=\"slides\">You can also save anything you find for later. It will then be in the downloaded content section of the app, where you can share and view it. Note: next time when you scan that target, the content will also load faster!</h2>");
+            createCarousel("blue",[
+                "<h2 class=\"slides\">For best results, please make sure that the image is clear and big enough in your viewfinder</h2>",
+                "<h2 class=\"slides\">If you want to see something up close, pinch your fingers on the screen too zoom</h2>",  
+                "<h2 class=\"slides\">If you want to watch a longer video but don't want to see it in AR, click the fullscreen button (in the white menu in the right bottom corner of the screen)</h2>",
+                "<h2 class=\"slides\">You can share anything you find with your friends by clicking the share button in the menu located in the bottom right hand corner of your screen</h2>",
+                "<h2 class=\"slides\">You can also save anything you find for later. It will then be in the downloaded content section of the app, where you can share and view it. Note: next time when you scan that target, the content will also load faster!</h2>"
+            ]);
         });
         $("#footer").load("html-elements/actionFooter.html", function(){
             $(".footer").addClass("blue");

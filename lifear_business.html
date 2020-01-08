@@ -151,13 +151,13 @@
                 <h2 class="text-blue">Pricing</h2>
                 <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the database</p>
                 <div class="row">
-                    <div id="pricingBasic"></div>
-                    <div id="pricingSmall"></div>
-                    <div id="pricingMedium"></div>
-                    <div id="pricingLarge"></div>
+                    <div class="rowItem" id="pricingBasic"></div>
+                    <div class="rowItem" id="pricingSmall"></div>
+                    <div class="rowItem" id="pricingMedium"></div>
+                    <div class="rowItem" id="pricingLarge"></div>
                 </div>
                 <div id="pricingCustom"></div>
-                <div id="included" class="pricingTable">
+                <div id="included" class="pricingTable custom">
                     <h3 class="planTitle">Included:</h3>
                     <ul>
                         <li>Unlimited free swapping</li>
@@ -172,36 +172,22 @@
     <div id="footer"></div>
     <div id="superFooter"></div>
     <script>
-        createPricingTable("#pricingBasic", "STARTER", "Perfect for experimentation", "1","1", "$10", false);
-        createPricingTable("#pricingSmall", "SMALL", "Perfect for occasional light usage", "3","3", "$30", false);
-        createPricingTable("#pricingMedium", "MEDIUM", "Recommended for most users", "5","5", "$40", false);
-        createPricingTable("#pricingLarge", "LARGE", "Perfect for larger marketing implementations", "10","10", "$50", false);
-    
-        createPricingTable("#pricingCustom", "Custom", "Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload", "","", "$100+", true);
-    
+        $("#pricingBasic").load("html-elements/pricing-table.html", function(){
+            createPricingTable("#pricingBasic", "STARTER", "Perfect for experimentation", "1","1", "$10", false);
+        });
+        $("#pricingSmall").load("html-elements/pricing-table.html", function(){
+            createPricingTable("#pricingSmall", "SMALL", "Perfect for light usage", "3","3", "$30", false);
+        });
+        $("#pricingMedium").load("html-elements/pricing-table.html", function(){
+            createPricingTable("#pricingMedium", "MEDIUM", "Recommended for most users", "5","5", "$40", false);
+        });
+        $("#pricingLarge").load("html-elements/pricing-table.html", function(){
+            createPricingTable("#pricingLarge", "LARGE", "Perfect for larger campaigns", "10","10", "$50", false);
+        });
+        $("#pricingCustom").load("html-elements/pricing-table.html", function(){
+            createPricingTable("#pricingCustom", "Custom", "Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload", "","", "$100+", true);
+        });
         $("#footer").load("html-elements/lifearFooter.html");
-
-        function createPricingTable(element, title, description, numImgs, numVids, price, isCustom){
-            $(element).load("html-elements/pricing-table.html", function(){
-                let target = $(element).find(".pricingTable");
-
-                target.find(".planTitle").text(title);
-                target.find(".description").text(description);
-                target.find(".price").text(price);
-
-                if (isCustom){
-                    target.find(".numImgs").hide();
-                    target.find(".numVids").hide();
-                    target.find(".imgTarget").hide();
-                    target.find(".vidTarget").hide();
-                }else{
-                    target.find(".numImgs").text(numImgs);
-                    target.find(".numVids").text(numVids);
-                }
-            
-            });
-        }
-
     </script>
     <!-- main content ends -->
 </body>

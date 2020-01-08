@@ -67,6 +67,14 @@
         margin-left: 25px;
         margin-right: 25px;
     }
+
+    &.withBackground{
+        background-color: #e3f0f6;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 10px;
+    width: 85%;  
+    }
 }
 
 .row{

@@ -1,6 +1,5 @@
 .slides {
     display: none;
-    height: 37vh;
     max-width: 0vw;
     vertical-align: middle;
     align-content: center;
@@ -8,6 +7,10 @@
     background-color: $backgroundColor;
     padding: 0px 30px;
     overflow: hidden;//as we scale during the animation, the text leaks out of the box
+    font-size: 3.4vmin;
+
+    min-height: 45vh;
+
     &.red{
         background-color: $backgroundColorRed;
     }
@@ -19,21 +22,28 @@
 }
 
 .carousel{
+    min-height: 45vh;
     width:100%;
     align-content: center;
     justify-content: center;
     position: relative;
     display: flex;
 }
+
+@media screen and (max-width: 400px){
+    .carousel{
+        margin-bottom: 25px;
+    }
+}
+
 .slideButton{
     width:10vw;
-    height: 10vw;
+    height: 100%;
     min-width: 50px;
     background: none;
     color: none;
     border: none;
     padding: 8px;
-    top: 10vh;
     position: absolute;
     outline: none;
 

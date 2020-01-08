@@ -1,47 +1,69 @@
 <script>
-var i = 0;
-var slides = $(".slides");
+    var i = 0;
+    var slides;
+    var height;
 
-$(document).ready(function() {
-    slides = $(".slides");
-});
+    $(document).ready(function() {
+        slides = $(".slides");
+        height = $(".slides:eq(0)").height() + "px";
+        $(".carousel").css("max-height", height);
+    });
 
-$("#left").click(function(){
-    switchSlides(-1);
-});
+    $(window).on("resize",function(){
+        height = $(".slides:eq(0)").height() + "px";
+        $(".carousel").css("max-height", height);
+    });
 
-$('#right').click(function(){
-    switchSlides(1);
-});
+    $("#left").click(function(){
+        switchSlides(-1);
+    });
 
-function switchSlides(amount){
-    var currentSlide = slides[i];
+    $('#right').click(function(){
+        switchSlides(1);
+    });
 
-    if ($(currentSlide).hasClass("video")){
-        $(currentSlide).get(0).pause();
+    function switchSlides(amount){
+        var currentSlide = slides[i];
+
+        if ($(currentSlide).hasClass("video")){
+            $(currentSlide).get(0).pause();
+        }
+
+        i += amount;
+
+        if (i > slides.length-1){
+            i = 0;
+        }else if (i < 0){
+            i = slides.length-1;
+        }
+
+        var nextSlide = $(".slides")[i];
+
+        $(currentSlide).animate({
+        maxWidth: '0vw'
+        }, { duration: 250, queue: false, complete: function() {
+            $(currentSlide).hide();
+        }});
+
+        $(nextSlide).show();
+        $(nextSlide).height(height);
+        $(nextSlide).animate({
+        maxWidth: '50vw'
+        }, { duration: 250, queue: false, complete: function() {
+            $(nextSlide).css("display","grid");
+        }});
     }
 
-    i += amount;
+    function createCarousel(theme, entries){
+        $(".carousel").addClass(theme);
+        $(".arrow").addClass(theme);
 
-    if (i > slides.length-1){
-        i = 0;
-    }else if (i < 0){
-        i = slides.length-1;
+        entries.forEach(function(entry) {
+            $(".carousel").append(entry);
+        });
+        
+        $(".slides:eq(0)").addClass("showing");
     }
-
-    var nextSlide = $(".slides")[i];
-
-    $(currentSlide).animate({
-       maxWidth: '0vw'
-    }, { duration: 250, queue: false, complete: function() {
-        $(currentSlide).hide();
-    }});
-
-    $(nextSlide).show();
-    $(nextSlide).animate({
-       maxWidth: '50vw'
-    }, { duration: 250, queue: false });
-}
 
 </script>
 <div class="carousel">

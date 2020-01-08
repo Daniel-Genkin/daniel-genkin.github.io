@@ -5,6 +5,42 @@
     padding-bottom: 40px;
     padding-top: 40px;
 }
-@include testimonialGenerator("authorA");
-@include testimonialGenerator("authorB");
-@include testimonialGenerator("authorC");
+.testimonial{
+    text-align: center;
+    margin: 8px;
+    border: solid white 5px;
+    padding: 8px;
+    box-shadow: #cdcdcd 0px 0px 25px;
+}
+.testimonial::before{
+    content: "\"";
+    width: 100%;
+    display: inherit;
+    position: relative;
+    z-index: 1;
+    top: 0;
+    color: black;
+    text-align: center;
+    font-size: xxx-large;
+    font-style: oblique;
+    font-weight: bolder;
+    height: 1em;
+}
+.testimonial-author{
+    width: 100%;
+    color: rgba($color: black, $alpha: 0.4);
+    text-align: center;
+    position: relative;
+    display: inherit;
+    padding-top: 25px;
+    margin-bottom: 0;
+}
+.testimonial-author-title{
+  width: 100%;
+  color: rgba($color: black, $alpha: 0.3);
+  text-align: center;
+  position: relative;
+  display: inherit;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}

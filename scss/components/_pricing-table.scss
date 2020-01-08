@@ -5,6 +5,11 @@
     margin: 4px;
     padding: 0;
     box-sizing: border-box;
+    width: 250px;
+
+    &.custom{
+        width: 100%;
+    }
 }
 
 .price, .priceAfter{
@@ -20,6 +25,12 @@
 
 .description, .imgTarget, .vidTarget{
     border-bottom: 1px solid #ccc;
+}
+.description{
+    display: table-cell;
+    vertical-align: middle;
+    height: 8vh;
+    padding: 2px 5px;
 }
 .pricingTable p{
     margin: 5px;
