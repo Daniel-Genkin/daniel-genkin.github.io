@@ -445,8 +445,8 @@ h5 {
   background-color: #ecf8fe;
   padding: 0px 30px;
   overflow: hidden;
-  font-size: 3.4vmin;
-  min-height: 45vh;
+  font-size: 4vmin;
+  min-height: 45vmin;
 }
 
 .slides.red {
@@ -460,7 +460,7 @@ h5 {
 }
 
 .carousel {
-  min-height: 45vh;
+  min-height: 45vmin;
   width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -1496,8 +1496,25 @@ nav.red::before {
           box-shadow: none;
 }
 
+.lifearImage {
+  max-height: 50vh;
+  max-width: 25vw;
+}
+
 @media screen and (max-width: 700px) {
   .doohickey:nth-child(5) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .doohickey:nth-child(4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .doohickey {
     display: none;
   }
 }
