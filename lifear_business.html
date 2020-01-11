@@ -49,7 +49,7 @@
         </div>
         <div class="Section">
             <h2 class="text-blue">What is AR</h2>
-            <video class="ColumnSVG" controls><source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
+            <video id="video" class="ColumnSVG" controls><source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
             <p>
                 The power of augmented reality (AR) makes images, videos and 3D
                     models emerge from printed materials and become interactive. ​
@@ -59,7 +59,7 @@
         </div>
         <div class="Section">
             <h2 class="text-blue">Modernizing Printed Marketing</h2>
-                <table cellspacing="0">
+                <table id="table" cellspacing="0">
                     <tr class="tableHeader">
                         <th style="color: white;">Capability</th>
                         <th class="lifearColumn first">LifeAR</th>
@@ -176,7 +176,7 @@
             createPricingTable("#pricingBasic", "STARTER", "Perfect for experimentation", "1","1", "$10", false);
         });
         $("#pricingSmall").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingSmall", "SMALL", "Perfect for light usage", "3","3", "$30", false);
+            createPricingTable("#pricingSmall", "SMALL", "Perfect for light usage", "3","3", "$25", false);
         });
         $("#pricingMedium").load("html-elements/pricing-table.html", function(){
             createPricingTable("#pricingMedium", "MEDIUM", "Recommended for most users", "5","5", "$40", false);

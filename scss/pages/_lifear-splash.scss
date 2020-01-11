@@ -33,25 +33,14 @@
     -webkit-text-stroke-color: white;
 }
 
-#title1{
-    grid-area: Title1;
-}
-#title2{
-    grid-area: Title2;
-}
-
 .inverseButton{
     background-color:white;
     padding: 15px 0px;
     font-size: 2em;
     margin-right: 5%;
-}
-#button1{
-    grid-area: Button1;
-    
-}
-#button2{
-    grid-area: Button2;
+    height: 13vh;
+    max-height: 60px;
+    // line-height: min(13vh, 60px);
 }
 
 @media screen and ( max-width:700px ){
@@ -99,4 +88,18 @@
                          "Title2 Title2 Title2"
                          ". . .";
     }
+}
+
+#title1{
+    grid-area: Title1;
+}
+#title2{
+    grid-area: Title2;
+}
+#button1{
+    grid-area: Button1;
+    
+}
+#button2{
+    grid-area: Button2;
 }

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="scss/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DGApps - Contact</title>
+  <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png" />
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+  <script>
+    $("#header").load("html-elements/header.html", function () {
+      $(".headerTitle").text("My Entreprenurial Journey");
+      $(".headerImage").attr("src", "Resources/pages/index/me-circle.png");
+      $(".headerLogo").remove();
+      $(".headerSubtitle").remove();
+    });
+
+    $("#nav").load("html-elements/nav.html");
+  </script>
+  <!-- main content -->
+  <div id="contents">
+    <p>
+      Farrah Gray once said: “Build your own dreams, or someone else will hire you to build theirs.” I am building my
+      dreams and my future by achieving academic excellence at school and spending my free time contributing and getting
+      involved with the Niagara community. In 2018-19, I was a grade 12 student at Sir Winston Churchill Secondary
+      School, enrolled in the Head Start Program at Brock University. During high school, I have attained 122 community
+      service hours.
+      <br>​<br>
+        Software development is my passion and I aspire to create software for people to use and enjoy. So, I have been
+      developing this app-based start-up venture, DGApps. This venture, along with school, events (i.e. Connect
+      Educational Conference) and competitions (i.e. DECA), have guided me on my way through my entrepreneurial journey.
+      For the past four years, I have been an active member of many of the local start up incubators, particularly ihub
+      and Goodman Group Venture Development (formerly BioLinc). Networking has helped me to become an active member of
+      the Niagara community. My most recent app, LifeAR, won the Most Promising Start-up Award and People’s Choice Award
+      at Connect 2019, Canada’s largest educational technology conference, in early May of 2019. I try to meet and talk
+      to as many people as possible, to learn about their ideas and businesses, to share my experiences/knowledge with
+      them and listen closely to theirs.
+      ​<br>​<br>
+        The Niagara community has allowed me to succeed and pursue my dreams. My work has been recognized at the Niagara
+      Entrepreneur of the Year Awards Ceremony on March 1, 2019 when I was awarded the Gene Luczkiw Spirit of Enterprise
+      Award. Gene Luczkiw defined entrepreneurship, “the taking of initiative to achieve a self-determined goal while
+      sharing your achievement with others.” His approach to entrepreneurship was communal and I embrace and elaborate
+      upon it. In my future endeavors, I will uphold and promote his views.
+    </p>
+    <h3 class="text-blue">-Daniel Genkin</h3>
+    <h4> Founder and Developer, DGApps</h4>
+  </div>
+  <div id="footer"></div>
+  <div id="superFooter"></div>
+  <script>
+    $("#footer").load("html-elements/socialFooter.html", function () {
+      $(".connectText").remove();
+    });
+    $("#superFooter").load("html-elements/superFooter.html");
+  </script>
+</body>
+
+</html>

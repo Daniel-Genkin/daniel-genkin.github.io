@@ -17,6 +17,10 @@
 }
 .area4{
     grid-area: area4;
+    background-image: url(../Resources/universal/youtube.svg);
+}
+.area5{
+    grid-area: area5;
     background-image: url(../Resources/universal/mail.svg);
 }
 .superFooter{
@@ -38,7 +42,7 @@
     width: 100%;
     height: 10vh;
     grid-column-start: area1;
-    grid-column-end: area4;
+    grid-column-end: area5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,7 +73,6 @@
     height: 10vh;
     grid-column-start: area1;
     grid-column-end: area2;
-    margin-right: 24px;
     transition: background-color 0.2s ease-in-out;
     img{
         width:100%;
@@ -80,9 +83,8 @@
 .semi-large2{
     width: 100%;
     height: 10vh;
-    grid-column-start: area3;
-    grid-column-end: area4;
-    margin-left: 24px;
+    grid-column-start: area4;
+    grid-column-end: area5;
     transition: background-color 0.2s ease-in-out;
     img{
         width:100%;
@@ -96,13 +98,6 @@
     width: 100%;
     border-radius: 50vh;
     padding: 1.5vh 1.5vw;
-
-    &.left {
-        padding-left: 1vw;
-    }
-    &.right {
-        padding-right: 1vw;
-    }
 
     @media screen and (max-width: 500px){
         padding: 0.1vh 1.5vw;
@@ -127,17 +122,17 @@
 .footer{
     font-family: 'Nunito', sans-serif;
     margin: 0;
-    width:100%;
+    width: 100%;
     height: 50%;
     background-image: url(../Resources/universal/footer.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
     display: grid;
-    grid-template-areas: ". connect connect connect connect ."
-                         ". area1 area2 area3 area4 .";
+    grid-template-areas: ". connect connect connect connect connect ."
+                         ". area1 area2 area3 area4 area5 .";
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
 
     justify-items: center;
     align-items: center;
@@ -150,7 +145,7 @@
 }
 @media screen and (max-width: 700px){
     .footer{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     .socialButton{
         width: 13vw;

@@ -289,6 +289,13 @@ h5 {
           justify-content: center;
 }
 
+@media screen and (max-width: 700px) {
+  .TwoColumnSection {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .button {
   border-style: solid;
   width: 50%;
@@ -1017,7 +1024,7 @@ nav.red::before {
 .connectText {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 4;
+  -ms-grid-column-span: 5;
   grid-area: connect;
   text-align: center;
   margin-bottom: 25px;
@@ -1048,6 +1055,13 @@ nav.red::before {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   grid-area: area4;
+  background-image: url(../Resources/universal/youtube.svg);
+}
+
+.area5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 6;
+  grid-area: area5;
   background-image: url(../Resources/universal/mail.svg);
 }
 
@@ -1073,7 +1087,7 @@ nav.red::before {
   height: 10vh;
   -ms-grid-column: area1;
       grid-column-start: area1;
-  grid-column-end: area4;
+  grid-column-end: area5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1115,7 +1129,6 @@ nav.red::before {
   -ms-grid-column: area1;
       grid-column-start: area1;
   grid-column-end: area2;
-  margin-right: 24px;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
@@ -1128,10 +1141,9 @@ nav.red::before {
 .semi-large2 {
   width: 100%;
   height: 10vh;
-  -ms-grid-column: area3;
-      grid-column-start: area3;
-  grid-column-end: area4;
-  margin-left: 24px;
+  -ms-grid-column: area4;
+      grid-column-start: area4;
+  grid-column-end: area5;
   -webkit-transition: background-color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out;
 }
@@ -1149,14 +1161,6 @@ nav.red::before {
   width: 100%;
   border-radius: 50vh;
   padding: 1.5vh 1.5vw;
-}
-
-.lifearBackground.left {
-  padding-left: 1vw;
-}
-
-.lifearBackground.right {
-  padding-right: 1vw;
 }
 
 @media screen and (max-width: 500px) {
@@ -1192,11 +1196,11 @@ nav.red::before {
   background-size: 100% 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". connect connect connect connect ." ". area1 area2 area3 area4 .";
+      grid-template-areas: ". connect connect connect connect connect ." ". area1 area2 area3 area4 area5 .";
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+  -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1212,8 +1216,8 @@ nav.red::before {
 
 @media screen and (max-width: 700px) {
   .footer {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .socialButton {
     width: 13vw;
@@ -1353,39 +1357,13 @@ nav.red::before {
   -webkit-text-stroke-color: white;
 }
 
-#title1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: Title1;
-}
-
-#title2 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: Title2;
-}
-
 .inverseButton {
   background-color: white;
   padding: 15px 0px;
   font-size: 2em;
   margin-right: 5%;
-}
-
-#button1 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: Button1;
-}
-
-#button2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: Button2;
+  height: 13vh;
+  max-height: 60px;
 }
 
 @media screen and (max-width: 700px) {
@@ -1427,6 +1405,34 @@ nav.red::before {
   }
 }
 
+#title1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Title1;
+}
+
+#title2 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Title2;
+}
+
+#button1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Button1;
+}
+
+#button2 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: Button2;
+}
+
 #carouselSection {
   margin-bottom: 5%;
 }
@@ -1447,9 +1453,10 @@ nav.red::before {
   background-image: url(../Resources/pages/lifear/lifear_activism_background2.svg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  margin-left: -6%;
-  margin-right: -6%;
-  height: calc(100vw);
+  margin-left: 0 auto;
+  height: 100vw;
+  margin-left: -5.55%;
+  margin-right: -5.55%;
   margin-bottom: -10%;
 }
 
