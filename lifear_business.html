@@ -173,19 +173,19 @@
     <div id="superFooter"></div>
     <script>
         $("#pricingBasic").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingBasic", "STARTER", "Perfect for experimentation", "1","1", "$10", false);
+            createPricingTable("#pricingBasic", "STARTER","",  "1", "$10", false);
         });
         $("#pricingSmall").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingSmall", "SMALL", "Perfect for light usage", "3","3", "$25", false);
+            createPricingTable("#pricingSmall", "SMALL", "", "3", "$25", false);
         });
         $("#pricingMedium").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingMedium", "MEDIUM", "Recommended for most users", "5","5", "$40", false);
+            createPricingTable("#pricingMedium", "MEDIUM","", "5", "$40", false);
         });
         $("#pricingLarge").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingLarge", "LARGE", "Perfect for larger campaigns", "10","10", "$50", false);
+            createPricingTable("#pricingLarge", "LARGE","", "10", "$50", false);
         });
         $("#pricingCustom").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingCustom", "Custom", "Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload", "","", "$100+", true);
+            createPricingTable("#pricingCustom", "Custom", "Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload", "", "$100+", true);
         });
         $("#footer").load("html-elements/lifearFooter.html");
     </script>

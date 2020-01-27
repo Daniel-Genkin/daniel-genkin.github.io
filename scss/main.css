@@ -613,11 +613,6 @@ h5 {
   margin: 5px;
 }
 
-.pricingTable:focus, .pricingTable:hover {
-  -webkit-box-shadow: grey 0px 0px 10px;
-          box-shadow: grey 0px 0px 10px;
-}
-
 #included {
   display: -webkit-box;
   display: -ms-flexbox;
