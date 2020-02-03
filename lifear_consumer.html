@@ -20,13 +20,21 @@
             $(".headerImage").attr("src", "Resources/pages/lifear/LifeARLogo.png");
             $(".headerLogo").remove();
             $(".headerSubtitle").text("Ready To Discover AR?");
+
+            $(".header").addClass("lifear");
+            $(".headerSubtitle").addClass("dark");
         });
-        $("#nav").load("html-elements/nav.html");
+        $("#nav").load("html-elements/nav.html", function(){
+            $(".burger").addClass("lifear");
+            $(".bar").addClass("lifear");
+            $("#menu").addClass("lifear");
+            $(".innerMenuLink").addClass("lifear");
+        });
     </script>
     <!-- main content -->
     <div id="contents">
         <div class="Section">
-            <h2 class="text-blue">Modernizing Traditional Print Media</h2>
+            <h2 class="text-lifear">Modernizing Traditional Print Media</h2>
             <p>LifeAR is a universal augmented reality (AR) platform
                 that presents information in an interactive and engaging
                 ways. Use LifeAR to enhance your presentations and to
@@ -35,22 +43,22 @@
         <div class="TwoColumnSection">
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/discover.svg">
-                <h2 class="text-blue">1. Discover</h2>
+                <h2 class="text-lifear">1. Discover</h2>
                 <p style="margin-top:0;">Point your device at any material that is part of the LifeAR community</p>
             </div>
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/info.svg">
-                <h2 class="text-blue">2. Learn more</h2>
+                <h2 class="text-lifear">2. Learn more</h2>
                 <p style="margin-top:0;">Watch 3D models, videos, images, websites and more appear</p>
             </div>
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/share.svg">
-                <h2 class="text-blue">3. Share & Save</h2>
+                <h2 class="text-lifear">3. Share & Save</h2>
                 <p style="margin-top:0;">Save the content for later or share it with friends</p style="margin-top:0;">
             </div>
         </div>
         <div class="Section">
-            <h2 class="text-blue">What is AR</h2>
+            <h2 class="text-lifear">What is AR</h2>
             <video class="ColumnSVG" controls><source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
             <p>
                 The power of augmented reality (AR) makes images, videos and 3D
@@ -60,8 +68,8 @@
             </p>
         </div>
         <div class="TwoColumnSection">
-            <a style="width: 100%" href="lifear-faq.html" class="button btn-blue">FAQ</a>
-            <a style="width: 100%" href="lifear-gallery.html" class="button btn-blue">Gallery</a>
+            <a style="width: 100%" href="lifear-faq.html" class="button btn-lifear">FAQ</a>
+            <a style="width: 100%" href="lifear-gallery.html" class="button btn-lifear">Gallery</a>
         </div>
          <div id="ActivismSection"></div>
     </div>

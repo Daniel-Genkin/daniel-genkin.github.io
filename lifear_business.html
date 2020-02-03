@@ -18,13 +18,21 @@
             $(".headerImage").attr("src","Resources/pages/lifear/LifeARLogo.png");
             $(".headerLogo").remove();
             $(".headerSubtitle").text("Ready To Discover AR?");
+
+            $(".header").addClass("lifear");
+            $(".headerSubtitle").addClass("dark");
         });
-        $("#nav").load("html-elements/nav.html");
+        $("#nav").load("html-elements/nav.html", function(){
+            $(".burger").addClass("lifear");
+            $(".bar").addClass("lifear");
+            $("#menu").addClass("lifear");
+            $(".innerMenuLink").addClass("lifear");
+        });
     </script>
     <!-- main content -->
     <div id="contents">
         <div class="Section">
-            <h2 class="text-blue">Modernizing Traditional Print Media</h2>
+            <h2 class="text-lifear">Modernizing Traditional Print Media</h2>
             <p>LifeAR is a universal augmented reality (AR) platform
                 that presents information in an interactive and engaging
                 ways. Use LifeAR to enhance your presentations and to
@@ -33,22 +41,22 @@
         <div class="TwoColumnSection">
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/discover.svg">
-                <h2 class="text-blue">1. Discover</h2>
+                <h2 class="text-lifear-dark">1. Discover</h2>
                 <p style="margin-top:0;">Point your device at any material that is part of the LifeAR database</p>
             </div>
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/info.svg">
-                <h2 class="text-blue">2. Learn more</h2>
+                <h2 class="text-lifear-dark">2. Learn more</h2>
                 <p style="margin-top:0;">Watch 3D models, videos, images, websites and more appear</p>
             </div>
             <div class="Section">
                 <img class="icon small" src="Resources/pages/lifear/share.svg">
-                <h2 class="text-blue">3. Share & Save</h2>
+                <h2 class="text-lifear-dark">3. Share & Save</h2>
                 <p style="margin-top:0;">Save the content for later or share it with friends</p style="margin-top:0;">
             </div>
         </div>
         <div class="Section">
-            <h2 class="text-blue">What is AR</h2>
+            <h2 class="text-lifear">What is AR</h2>
             <video id="video" class="ColumnSVG" controls><source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
             <p>
                 The power of augmented reality (AR) makes images, videos and 3D
@@ -58,7 +66,7 @@
             </p>
         </div>
         <div class="Section">
-            <h2 class="text-blue">Modernizing Printed Marketing</h2>
+            <h2 class="text-lifear">Modernizing Printed Marketing</h2>
                 <table id="table" cellspacing="0">
                     <tr class="tableHeader">
                         <th style="color: white;">Capability</th>
@@ -110,7 +118,7 @@
             <div id="AddingTargets" class="TwoColumnSection">
                 <img src="Resources/pages/lifear/how_to_manage_targets.png" class="lifearImage">
                 <div>
-                    <h2 class="text-blue">Single Click Target Management</h2>
+                    <h2 class="text-lifear">Single Click Target Management</h2>
                     <p>
                         All target/content manipulation is done via the LifeAR app. This simplifies the process and allows you to easily add or remove your targets quickly and easily. Just tap the garbage can to delete or the Add Target button to add a new target.
                     </p>
@@ -119,7 +127,7 @@
 
             <div class="TwoColumnSection">
             <div>
-                <h2 class="text-blue">Load Targets From Anywhere</h2>
+                <h2 class="text-lifear">Load Targets From Anywhere</h2>
                 <p>
                     LifeAR's content management approach allows for adding content and targets from your favourite Cloud storage providers (i.e. Google Drive) as well as straight from your phone.
                 </p>
@@ -130,7 +138,7 @@
             <div class="TwoColumnSection">
                 <img src="Resources/pages/lifear/how_to_upload_targets.png"  class="lifearImage">
                 <div>
-                    <h2 class="text-blue">Add New Targets in 5 Steps</h2>
+                    <h2 class="text-lifear">Add New Targets in 5 Steps</h2>
                     <ol>
                         <li>Select a Name</li>
                         <li>Select a Target (what is recognized by LifeAR)</li>
@@ -142,13 +150,13 @@
             </div>
             <div class="Section">
                 <div class="TwoColumnSection">
-                    <a style="width: 100%" href="lifear-faq.html" class="button btn-blue">FAQ</a>
-                    <a style="width: 100%" href="lifear-gallery.html" class="button btn-blue">Gallery</a>
+                    <a style="width: 100%" href="lifear-faq.html" class="button btn-lifear">FAQ</a>
+                    <a style="width: 100%" href="lifear-gallery.html" class="button btn-lifear">Gallery</a>
                 </div>
            </div>
             <!-- id used for anchor -->
             <div class="Section" id="Pricing">
-                <h2 class="text-blue">Pricing</h2>
+                <h2 class="text-lifear">Pricing</h2>
                 <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the database</p>
                 <div class="row">
                     <div class="rowItem" id="pricingBasic"></div>

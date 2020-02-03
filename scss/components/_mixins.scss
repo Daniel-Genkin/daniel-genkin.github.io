@@ -15,6 +15,8 @@
 @include btnCreator("green", $green);
 @include btnCreator("teal", $teal);
 @include btnCreator("red", $red);
+@include btnCreator("lifear", $lifear);
+@include btnCreator("lifear-dark", $lifear-dark);
 
 @mixin createColoredAppButton($name, $color){
     .appButton.#{$name}-border{
@@ -39,3 +41,5 @@
 @include textColorCreator("blue", $blue);
 @include textColorCreator("red", $red);
 @include textColorCreator("yellow", $yellow);
+@include textColorCreator("lifear", $lifear);
+@include textColorCreator("lifear-dark", $lifear-dark);

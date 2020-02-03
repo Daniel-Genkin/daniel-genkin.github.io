@@ -20,6 +20,10 @@
     align-self: start;
     justify-self: start;
     margin-left: 25%;
+
+    &.dark{
+        color: #2D7797;
+    }
 }
 .headerImage{
     grid-area: Image;
@@ -63,6 +67,9 @@
     }
     &.red{
         background-image: url(../Resources/universal/header-red.svg);
+    }
+    &.lifear{
+        background-image: url(../Resources/universal/header-lifear.svg);
     }
 }
 @media only screen and (max-width: 600px) {

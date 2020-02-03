@@ -38,7 +38,11 @@
     nav.#{$name}::before{
         @if $color == $red{
             background-image: url(../Resources/universal/menu-red.svg);
-        } @else {
+        } 
+        @else if $color == $lifear-dark{
+            background-image: url(../Resources/universal/menu-lifear.svg);
+        }
+        @else {
             background-image: url(../Resources/universal/menu.svg);
         }
     }
