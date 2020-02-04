@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - Contact</title>
+    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+    <script>
+        $("#header").load("html-elements/header.html", function () {
+            $(".header").addClass("tall");
+            $(".headerImage").addClass("noMax");
+            $(".headerTitle").css({ "margin-top": "0px" });
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+  <!-- main content -->
+  <div id="contents">
+    <div class="Section">
+      <h1 class="text-blue">NOTHING HERE :(</h1>
+      <br>
+      <p>The page you request doesn't exist. Double check your URL is correct or use the menu in the top right corner of this page.</p>
+      <a href="/" class="button btn-blue">Home</a>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <div id="superFooter"></div>
+  <script>
+      $("#footer").load("html-elements/socialFooter.html",function() {
+        $(".connectText").remove();
+      });
+      $("#superFooter").load("html-elements/superFooter.html");
+  </script>
+</body>
+</html>
