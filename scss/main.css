@@ -727,7 +727,10 @@ h5 {
   background-size: 100% 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "Logo ." "Title Image" "Subtitle Image" ". .";
+      grid-template-areas: "Logo ."
+ "Title Image"
+ "Subtitle Image"
+ ". .";
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
   -ms-grid-columns: 1fr 1fr;
@@ -740,7 +743,10 @@ h5 {
 
 .header.tall {
   height: 85vh;
-      grid-template-areas: "Logo Image" "Title Image" "Subtitle Image" ". Image";
+      grid-template-areas: "Logo Image"
+ "Title Image"
+ "Subtitle Image"
+ ". Image";
 }
 
 .header.red {
@@ -771,6 +777,9 @@ h5 {
   }
   .header.red {
     background-color: #e53f3f;
+  }
+  .header.lifear {
+    background-color: #46b1df;
   }
   .headerLogo {
     width: auto;
@@ -1254,7 +1263,8 @@ nav.lifear::before {
   background-size: 100% 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". connect connect connect connect connect ." ". area1 area2 area3 area4 area5 .";
+      grid-template-areas: ". connect connect connect connect connect ."
+ ". area1 area2 area3 area4 area5 .";
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -1392,7 +1402,12 @@ nav.lifear::before {
   right: 0;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 ." ". Button2 Button2" "Title2 Title2 Title2" ". . .";
+      grid-template-areas: ". . ."
+ "Title1 Title1 Title1"
+ "Button1 Button1 ."
+ ". Button2 Button2"
+ "Title2 Title2 Title2"
+ ". . .";
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
@@ -1446,7 +1461,12 @@ nav.lifear::before {
     font-size: 1.5em;
   }
   #lifeARSplashContent {
-        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
+        grid-template-areas: ". . ."
+ "Title1 Title1 Title1"
+ "Button1 Button1 Button1"
+ "Button2 Button2 Button2"
+ "Title2 Title2 Title2"
+ ". . .";
   }
 }
 
@@ -1460,7 +1480,12 @@ nav.lifear::before {
     font-size: 1em;
   }
   #lifeARSplashContent {
-        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
+        grid-template-areas: ". . ."
+ "Title1 Title1 Title1"
+ "Button1 Button1 Button1"
+ "Button2 Button2 Button2"
+ "Title2 Title2 Title2"
+ ". . .";
   }
 }
 
