@@ -1,12 +1,15 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="scss/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DGApps</title>
-  <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
+  <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png" />
+  <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css" />
+  <script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script>
 </head>
 
 <body>
@@ -40,9 +43,10 @@
       <div>
         <h2 class="text-red">The Developer</h2>
         <p class="rightCenter">My name is Daniel Genkin and I am a McMaster University Computer Science
-        student. Computer Science and software development are my passion and I am looking forward to pursuing a future
-        in this field. Since entering high school, I have been developing this mobile app-based start-up venture,
-        DGApps. I am interested in science and engineering and I aspire to create innovative and inspiring products.
+          student. Computer Science and software development are my passion and I am looking forward to pursuing a
+          future
+          in this field. Since entering high school, I have been developing this mobile app-based start-up venture,
+          DGApps. I am interested in science and engineering and I aspire to create innovative and inspiring products.
         </p>
         <a class="button btn-red" href="journey.html">My Entrepreneurial Journey</a>
       </div>
@@ -78,6 +82,8 @@
     $("#superFooter").load("html-elements/superFooter.html");
   </script>
   <!-- main content ends -->
+  <!-- cookie policy pop up -->
+  <script>window.addEventListener("load", function () { window.wpcc.init({ "border": "thin", "corners": "large", "colors": { "popup": { "background": "#ffffff", "text": "#000000", "border": "#cacaca" }, "button": { "background": "#5e99c2", "text": "#ffffff" } }, "content": { "message": "We use cookies to make sure you get the best experience while using this website's optional dark mode toggle. ", "href": "https://dgapps.ca/cookie-policy.html" }, "position": "bottom-right" }) });</script>
 </body>
 
 </html>
