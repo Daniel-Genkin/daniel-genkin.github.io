@@ -3,65 +3,69 @@
     var slides;
     var height;
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         slides = $(".slides");
         height = $(".slides:eq(0)").height() + "px";
         $(".carousel").css("max-height", height);
     });
 
-    $(window).on("resize",function(){
+    $(window).on("resize", function () {
         height = $(".slides:eq(0)").height() + "px";
         $(".carousel").css("max-height", height);
     });
 
-    $("#left").click(function(){
+    $("#left").click(function () {
         switchSlides(-1);
     });
 
-    $('#right').click(function(){
+    $('#right').click(function () {
         switchSlides(1);
     });
 
-    function switchSlides(amount){
+    function switchSlides(amount) {
         var currentSlide = slides[i];
 
-        if ($(currentSlide).hasClass("video")){
+        if ($(currentSlide).hasClass("video")) {
             $(currentSlide).get(0).pause();
         }
 
         i += amount;
 
-        if (i > slides.length-1){
+        if (i > slides.length - 1) {
             i = 0;
-        }else if (i < 0){
-            i = slides.length-1;
+        } else if (i < 0) {
+            i = slides.length - 1;
         }
 
         var nextSlide = $(".slides")[i];
 
         $(currentSlide).animate({
-        maxWidth: '0vw'
-        }, { duration: 250, queue: false, complete: function() {
-            $(currentSlide).hide();
-        }});
+            maxWidth: '0vw'
+        }, {
+            duration: 250, queue: false, complete: function () {
+                $(currentSlide).hide();
+            }
+        });
 
         $(nextSlide).show();
         $(nextSlide).height(height);
         $(nextSlide).animate({
-        maxWidth: '50vw'
-        }, { duration: 250, queue: false, complete: function() {
-            $(nextSlide).css("display","grid");
-        }});
+            maxWidth: '50vw'
+        }, {
+            duration: 250, queue: false, complete: function () {
+                $(nextSlide).css("display", "grid");
+            }
+        });
     }
 
-    function createCarousel(theme, entries){
+    function createCarousel(theme, entries) {
         $(".carousel").addClass(theme);
         $(".arrow").addClass(theme);
 
-        entries.forEach(function(entry) {
+        entries.forEach(function (entry) {
             $(".carousel").append(entry);
         });
-        
+
         $(".slides:eq(0)").addClass("showing");
     }
 
@@ -69,7 +73,9 @@
 <div class="carousel">
     <button class="slideButton left" id="left">
         <svg viewBox="0 0 108 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="arrow" d="M23.6,87.1c-10-8.8-10-24.3,0-33.1l31.6-27.9c14.3-12.6,36.7-2.5,36.7,16.6v55.8c0,19-22.4,29.1-36.7,16.6,L23.6,87.1z" fill="white"></path>
+            <path class="arrow"
+                d="M23.6,87.1c-10-8.8-10-24.3,0-33.1l31.6-27.9c14.3-12.6,36.7-2.5,36.7,16.6v55.8c0,19-22.4,29.1-36.7,16.6,L23.6,87.1z"
+                fill="none"></path>
         </svg>
     </button>
 
@@ -77,7 +83,9 @@
 
     <button class="slideButton right" id="right">
         <svg viewBox="0 0 108 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path class="arrow" d="M84.4,53.9c10,8.8,10,24.3,0,33.1l-31.6,27.9c-14.3,12.6-36.7,2.5-36.7-16.6V42.6c0-19,22.4-29.1,36.7-16.6,L84.4,53.9z" fill="white"></path>
+            <path class="arrow"
+                d="M84.4,53.9c10,8.8,10,24.3,0,33.1l-31.6,27.9c-14.3,12.6-36.7,2.5-36.7-16.6V42.6c0-19,22.4-29.1,36.7-16.6,L84.4,53.9z"
+                fill="none"></path>
         </svg>
     </button>
 </div>

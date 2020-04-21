@@ -1,28 +1,30 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scss/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DGApps - LifeAR</title>
-    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png" />
 </head>
+
 <body>
     <!-- template -->
     <div id="header"></div>
     <div id="nav"></div>
-    <script >
-        $("#header").load("html-elements/header.html",function() {
+    <script>
+        $("#header").load("html-elements/header.html", function () {
             $(".headerTitle").text("LifeAR");
-            $(".headerImage").attr("src","Resources/pages/lifear/LifeARLogo.png");
+            $(".headerImage").attr("src", "Resources/pages/lifear/LifeARLogo.png");
             $(".headerLogo").remove();
             $(".headerSubtitle").text("Ready To Discover AR?");
 
             $(".header").addClass("lifear");
             $(".headerSubtitle").addClass("dark");
         });
-        $("#nav").load("html-elements/nav.html", function(){
+        $("#nav").load("html-elements/nav.html", function () {
             $(".burger").addClass("lifear");
             $(".bar").addClass("lifear");
             $("#menu").addClass("lifear");
@@ -57,17 +59,19 @@
         </div>
         <div class="Section">
             <h2 class="text-lifear">What is AR</h2>
-            <video id="video" class="ColumnSVG" controls><source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
+            <video id="video" class="ColumnSVG" controls>
+                <source src="Resources/pages/lifear/lifear-demo.mp4" type="video/mp4">Video not supported</video>
             <p>
                 The power of augmented reality (AR) makes images, videos and 3D
-                    models emerge from printed materials and become interactive. ​
-                    Imagine user manuals or informational flyers with embedded customized videos or 3D models.
-                    With AR, you can make you advertisments standout for your clients!
+                models emerge from printed materials and become interactive. ​
+                Imagine user manuals or informational flyers with embedded customized videos or 3D models.
+                With AR, you can make you advertisments standout for your clients!
             </p>
         </div>
         <div class="Section">
             <h2 class="text-lifear">Modernizing Printed Marketing</h2>
-                <table id="table" cellspacing="0">
+            <table id="table" cellspacing="0">
+                <tbody id="tableContents">
                     <tr class="tableHeader">
                         <th style="color: white;">Capability</th>
                         <th class="lifearColumn first">LifeAR</th>
@@ -80,7 +84,8 @@
                     </tr>
                     <tr>
                         <td>Effects, hidden content, etc.</td>
-                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td
+                            class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
                     <tr>
@@ -90,113 +95,125 @@
                     </tr>
                     <tr>
                         <td>Buttons</td>
-                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td
+                            class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
                     <tr>
                         <td>Tracking</td>
-                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td
+                            class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
                     <tr>
                         <td>Quick Content Swapping</td>
-                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td
+                            class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
                     <tr>
                         <td>Download and watch later</td>
-                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td
+                            class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
                     <tr>
                         <td>Share with remote friends</td>
-                        <td class="lifearColumn last"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg"></td class="lifearColumn">
+                        <td class="lifearColumn last"><img class="tableIcon" src="Resources/pages/lifear/checkmark.svg">
+                        </td class="lifearColumn">
                         <td><img class="tableIcon" src="Resources/pages/lifear/x.svg"></td>
                     </tr>
-                </table>
-            </div>             
-            <div id="AddingTargets" class="TwoColumnSection">
-                <img src="Resources/pages/lifear/how_to_manage_targets.png" class="lifearImage">
-                <div>
-                    <h2 class="text-lifear">Single Click Target Management</h2>
-                    <p>
-                        All target/content manipulation is done via the LifeAR app. This simplifies the process and allows you to easily add or remove your targets quickly and easily. Just tap the garbage can to delete or the Add Target button to add a new target.
-                    </p>
-                </div>
+                </tbody>
+            </table>
+        </div>
+        <div id="AddingTargets" class="TwoColumnSection">
+            <img src="Resources/pages/lifear/how_to_manage_targets.png" class="lifearImage">
+            <div>
+                <h2 class="text-lifear">Single Click Target Management</h2>
+                <p>
+                    All target/content manipulation is done via the LifeAR app. This simplifies the process and allows
+                    you to easily add or remove your targets quickly and easily. Just tap the garbage can to delete or
+                    the Add Target button to add a new target.
+                </p>
             </div>
+        </div>
 
-            <div class="TwoColumnSection">
+        <div class="TwoColumnSection">
             <div>
                 <h2 class="text-lifear">Load Targets From Anywhere</h2>
                 <p>
-                    LifeAR's content management approach allows for adding content and targets from your favourite Cloud storage providers (i.e. Google Drive) as well as straight from your phone.
+                    LifeAR's content management approach allows for adding content and targets from your favourite Cloud
+                    storage providers (i.e. Google Drive) as well as straight from your phone.
                 </p>
             </div>
-            <img src="Resources/pages/lifear/locations_to_add_from.png"  class="lifearImage">
-            </div>
-
-            <div class="TwoColumnSection">
-                <img src="Resources/pages/lifear/how_to_upload_targets.png"  class="lifearImage">
-                <div>
-                    <h2 class="text-lifear">Add New Targets in 5 Steps</h2>
-                    <ol>
-                        <li>Select a Name</li>
-                        <li>Select a Target (what is recognized by LifeAR)</li>
-                        <li>Select Content (what LifeAR shows ontop of your target)</li>
-                        <li>(Optional). Select your extras (additional content ideas, such as a website or button, that users can interact with)</li>
-                        <li>Click Upload</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="Section">
-                <div class="TwoColumnSection">
-                    <a style="width: 100%" href="lifear-faq.html" class="button btn-lifear">FAQ</a>
-                    <a style="width: 100%" href="lifear-gallery.html" class="button btn-lifear">Gallery</a>
-                </div>
-           </div>
-            <!-- id used for anchor -->
-            <div class="Section" id="Pricing">
-                <h2 class="text-lifear">Pricing</h2>
-                <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the database</p>
-                <div class="row">
-                    <div class="rowItem" id="pricingBasic"></div>
-                    <div class="rowItem" id="pricingSmall"></div>
-                    <div class="rowItem" id="pricingMedium"></div>
-                    <div class="rowItem" id="pricingLarge"></div>
-                </div>
-                <div id="pricingCustom"></div>
-                <div id="included" class="pricingTable custom">
-                    <h3 class="planTitle">Included:</h3>
-                    <ul>
-                        <li>Unlimited free swapping</li>
-                        <li>Saving and sharing options</li>
-                        <li>HTML and Button extras (displayed below the main content area)</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="ActivismSection"></div>
+            <img src="Resources/pages/lifear/locations_to_add_from.png" class="lifearImage">
         </div>
+
+        <div class="TwoColumnSection">
+            <img src="Resources/pages/lifear/how_to_upload_targets.png" class="lifearImage">
+            <div>
+                <h2 class="text-lifear">Add New Targets in 5 Steps</h2>
+                <ol>
+                    <li>Select a Name</li>
+                    <li>Select a Target (what is recognized by LifeAR)</li>
+                    <li>Select Content (what LifeAR shows ontop of your target)</li>
+                    <li>(Optional). Select your extras (additional content ideas, such as a website or button, that
+                        users can interact with)</li>
+                    <li>Click Upload</li>
+                </ol>
+            </div>
+        </div>
+        <div class="Section">
+            <div class="TwoColumnSection">
+                <a style="width: 100%" href="lifear-faq.html" class="button btn-lifear">FAQ</a>
+                <a style="width: 100%" href="lifear-gallery.html" class="button btn-lifear">Gallery</a>
+            </div>
+        </div>
+        <!-- id used for anchor -->
+        <div class="Section" id="Pricing">
+            <h2 class="text-lifear">Pricing</h2>
+            <p><strong>Note:</strong> The app is free to use. The prices below only apply to uploading targets to the
+                database</p>
+            <div class="row">
+                <div class="rowItem" id="pricingBasic"></div>
+                <div class="rowItem" id="pricingSmall"></div>
+                <div class="rowItem" id="pricingMedium"></div>
+                <div class="rowItem" id="pricingLarge"></div>
+            </div>
+            <div id="pricingCustom"></div>
+            <div id="included" class="pricingTable custom">
+                <h3 class="planTitle">Included:</h3>
+                <ul>
+                    <li>Unlimited free swapping</li>
+                    <li>Saving and sharing options</li>
+                    <li>HTML and Button extras (displayed below the main content area)</li>
+                </ul>
+            </div>
+        </div>
+        <div id="ActivismSection"></div>
+    </div>
     </div>
     <div id="footer"></div>
     <div id="superFooter"></div>
     <script>
-        $("#pricingBasic").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingBasic", "STARTER","",  "1", "$10", false);
+        $("#pricingBasic").load("html-elements/pricing-table.html", function () {
+            createPricingTable("#pricingBasic", "STARTER", "", "1", "$10", false);
         });
-        $("#pricingSmall").load("html-elements/pricing-table.html", function(){
+        $("#pricingSmall").load("html-elements/pricing-table.html", function () {
             createPricingTable("#pricingSmall", "SMALL", "", "3", "$15", false);
         });
-        $("#pricingMedium").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingMedium", "MEDIUM","", "5", "$40", false);
+        $("#pricingMedium").load("html-elements/pricing-table.html", function () {
+            createPricingTable("#pricingMedium", "MEDIUM", "", "5", "$40", false);
         });
-        $("#pricingLarge").load("html-elements/pricing-table.html", function(){
-            createPricingTable("#pricingLarge", "LARGE","", "10", "$60", false);
+        $("#pricingLarge").load("html-elements/pricing-table.html", function () {
+            createPricingTable("#pricingLarge", "LARGE", "", "10", "$60", false);
         });
-        $("#pricingCustom").load("html-elements/pricing-table.html", function(){
+        $("#pricingCustom").load("html-elements/pricing-table.html", function () {
             createPricingTable("#pricingCustom", "Custom", "Customize your plan fully. Includes displaying images and videos as well as 3D models, transparent video effects as well as HTML extra support and auto upload", "", "$100+", true);
         });
         $("#footer").load("html-elements/lifearFooter.html");
     </script>
     <!-- main content ends -->
 </body>
+
 </html>

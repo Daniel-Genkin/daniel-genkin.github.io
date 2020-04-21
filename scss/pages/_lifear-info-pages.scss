@@ -36,6 +36,10 @@
 // below is for business
 #table{
     border-color: $lifear-dark;
+    background-color: $lifear-dark;
+}
+#tableContents{
+    background-color: white;
 }
 .tableHeader{
     background-color: $lifear-dark;

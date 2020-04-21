@@ -49,6 +49,10 @@
     .TwoColumnSection{
         flex-wrap: wrap;
     }
+    .ColumnImage{
+        margin-right: 0;
+        background-image: url(../Resources/pages/index/circle-img-no-holder.svg);
+    }
 }
 
 .button{
@@ -137,9 +141,6 @@
         left: 0;
         position: absolute;
     }
-}
-.appButton:hover, .appButton:focus{
-    box-shadow: 0px 0px 10px #888888;
 }
 
 .interactiveElement{

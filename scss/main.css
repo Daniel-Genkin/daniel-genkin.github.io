@@ -124,7 +124,7 @@ h5 {
 
 .btn-blue:hover, .btn-blue:focus {
   background-color: rgba(63, 88, 229, 0.6);
-  color: #142691;
+  color: #040921;
   font-weight: bolder;
 }
 
@@ -136,7 +136,7 @@ h5 {
 
 .btn-yellow:hover, .btn-yellow:focus {
   background-color: rgba(215, 202, 64, 0.6);
-  color: #7d751a;
+  color: #141204;
   font-weight: bolder;
 }
 
@@ -148,7 +148,7 @@ h5 {
 
 .btn-green:hover, .btn-green:focus {
   background-color: rgba(127, 220, 84, 0.6);
-  color: #43931e;
+  color: #132908;
   font-weight: bolder;
 }
 
@@ -160,7 +160,7 @@ h5 {
 
 .btn-teal:hover, .btn-teal:focus {
   background-color: rgba(7, 152, 186, 0.6);
-  color: #02343f;
+  color: black;
   font-weight: bolder;
 }
 
@@ -172,7 +172,7 @@ h5 {
 
 .btn-red:hover, .btn-red:focus {
   background-color: rgba(229, 63, 63, 0.6);
-  color: #911414;
+  color: #210404;
   font-weight: bolder;
 }
 
@@ -184,7 +184,7 @@ h5 {
 
 .btn-lifear:hover, .btn-lifear:focus {
   background-color: rgba(70, 177, 223, 0.6);
-  color: #186a8d;
+  color: #061820;
   font-weight: bolder;
 }
 
@@ -196,7 +196,7 @@ h5 {
 
 .btn-lifear-dark:hover, .btn-lifear-dark:focus {
   background-color: rgba(32, 128, 168, 0.6);
-  color: #0c2e3d;
+  color: black;
   font-weight: bolder;
 }
 
@@ -326,6 +326,10 @@ h5 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .ColumnImage {
+    margin-right: 0;
+    background-image: url(../Resources/pages/index/circle-img-no-holder.svg);
+  }
 }
 
 .button {
@@ -426,11 +430,6 @@ h5 {
   bottom: 0;
   left: 0;
   position: absolute;
-}
-
-.appButton:hover, .appButton:focus {
-  -webkit-box-shadow: 0px 0px 10px #888888;
-          box-shadow: 0px 0px 10px #888888;
 }
 
 .interactiveElement {
@@ -567,11 +566,11 @@ h5 {
   background-color: white;
   border-radius: 35px;
   border-style: solid;
-  border-color: blue;
+  border-color: #3f58e5;
   border-width: 5px;
   padding: 8px;
   margin: 8px 0px;
-  color: blue;
+  color: #3f58e5;
   position: relative;
   background-color: white;
   -webkit-transition: all 0.2s ease-in-out;
@@ -581,7 +580,7 @@ h5 {
 .entryParent::before {
   content: "-";
   font-size: 75px;
-  color: blue;
+  color: #3f58e5;
   position: absolute;
   right: 0;
   top: -20px;
@@ -727,10 +726,7 @@ h5 {
   background-size: 100% 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "Logo ."
- "Title Image"
- "Subtitle Image"
- ". .";
+      grid-template-areas: "Logo ." "Title Image" "Subtitle Image" ". .";
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
   -ms-grid-columns: 1fr 1fr;
@@ -743,10 +739,7 @@ h5 {
 
 .header.tall {
   height: 85vh;
-      grid-template-areas: "Logo Image"
- "Title Image"
- "Subtitle Image"
- ". Image";
+      grid-template-areas: "Logo Image" "Title Image" "Subtitle Image" ". Image";
 }
 
 .header.red {
@@ -769,7 +762,7 @@ h5 {
     background-size: 100% 40%;
     background-position-y: bottom;
     background-color: #3f58e5;
-    height: 40vh;
+    height: 30vh;
     text-align: center;
   }
   .header.tall {
@@ -1263,8 +1256,7 @@ nav.lifear::before {
   background-size: 100% 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". connect connect connect connect connect ."
- ". area1 area2 area3 area4 area5 .";
+      grid-template-areas: ". connect connect connect connect connect ." ". area1 area2 area3 area4 area5 .";
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 2fr 1fr 1fr 1fr 1fr 1fr 2fr;
@@ -1402,12 +1394,7 @@ nav.lifear::before {
   right: 0;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". . ."
- "Title1 Title1 Title1"
- "Button1 Button1 ."
- ". Button2 Button2"
- "Title2 Title2 Title2"
- ". . .";
+      grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 ." ". Button2 Button2" "Title2 Title2 Title2" ". . .";
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 2fr 2fr 1fr 1fr;
@@ -1461,12 +1448,7 @@ nav.lifear::before {
     font-size: 1.5em;
   }
   #lifeARSplashContent {
-        grid-template-areas: ". . ."
- "Title1 Title1 Title1"
- "Button1 Button1 Button1"
- "Button2 Button2 Button2"
- "Title2 Title2 Title2"
- ". . .";
+        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
   }
 }
 
@@ -1480,12 +1462,7 @@ nav.lifear::before {
     font-size: 1em;
   }
   #lifeARSplashContent {
-        grid-template-areas: ". . ."
- "Title1 Title1 Title1"
- "Button1 Button1 Button1"
- "Button2 Button2 Button2"
- "Title2 Title2 Title2"
- ". . .";
+        grid-template-areas: ". . ." "Title1 Title1 Title1" "Button1 Button1 Button1" "Button2 Button2 Button2" "Title2 Title2 Title2" ". . .";
   }
 }
 
@@ -1570,6 +1547,11 @@ nav.lifear::before {
 
 #table {
   border-color: #2080a8;
+  background-color: #2080a8;
+}
+
+#tableContents {
+  background-color: white;
 }
 
 .tableHeader {

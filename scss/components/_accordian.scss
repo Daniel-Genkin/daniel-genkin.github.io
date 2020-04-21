@@ -2,11 +2,11 @@
     background-color: white;
     border-radius: 35px;
     border-style: solid;
-    border-color: blue;
+    border-color: $blue;
     border-width: 5px;
     padding: 8px;
     margin: 8px 0px;
-    color: blue;
+    color: $blue;
     position: relative;
     background-color: white;
     transition: all 0.2s ease-in-out;
@@ -14,7 +14,7 @@
     &::before {
         content: "-";
         font-size: 75px;
-        color:blue;
+        color:$blue;
         position: absolute;
         right: 0;
         top: -20px;

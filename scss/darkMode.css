@@ -1,0 +1,67 @@
+:root{
+    --backgroundColor: #3a3a3a;
+    --lighterBackgroundColor: #4e4e4e;
+    --forgroundColor: #cccccc;
+}
+
+body{
+    background-color: black;
+}
+p, td, li{
+    color: var(--forgroundColor);
+}
+video{
+    background-color: var(--backgroundColor) !important;
+}
+
+/*lifear pricing table*/
+.pricingTable p, .pricingTable li{
+    color: #696969;
+}
+/*index page some clients section*/
+.rowItem.withBorder{
+    background-color: var(--backgroundColor);
+}
+.rowItem.withBorder h3{
+        color: var(--forgroundColor);
+    }
+
+/* index page some clients section images */
+.icon.withBackground{
+    background-color: var(--lighterBackgroundColor);
+}
+/* slideshow slides */
+.slides{
+    background-color: var(--backgroundColor);
+    color: var(--forgroundColor);
+}
+/* accordian */
+.entryParent{
+    background-color:black;
+}
+.entryParent p {
+    color: var(--forgroundColor);
+}
+/* apps in portfolio */
+.appButton{
+    background-color:black;
+}
+/* lifear features table */
+#tableContents{
+    background-color: black;
+}
+/* lifear splash screen */
+#lifeARSplashContent{
+    background-image: url(../Resources/pages/lifear/lifear_splash_background_dark.svg);
+}
+
+/* for nav panel */
+nav.red::before{
+    background-image: url(../Resources/universal/menu-red_dark.svg);
+}
+nav::before{
+    background-image: url(../Resources/universal/menu_dark.svg);
+}
+nav.lifear::before{
+    background-image: url(../Resources/universal/menu-lifear_dark.svg);
+}

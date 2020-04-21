@@ -1,35 +1,62 @@
 <input class="menuInput" type="checkbox" id="navcheck" role="button" title="menu" style="display:none;">
 <label class="menuLabel" for="navcheck" aria-hidden="true" title="menu">
-	<span class="burger">
-		<span class="bar">
-			<span class="visuallyhidden">Menu</span>
-		</span>
-	</span>
+  <span class="burger">
+    <span class="bar">
+      <span class="visuallyhidden">Menu</span>
+    </span>
+  </span>
 </label>
 <nav id="menu">
-	<ul id="list">
-      <li><a class="navText" href="/">Home</a></li>
-      <li><a class="navText" href="lifear.html">LifeAR</a>
-        <ul class="innerMenu">
-          <li><a class="navTextInner" href="lifear-gallery.html">Gallery</a></li>
-          <li><a class="navTextInner" href="lifear_business.html#Pricing">Pricing</a></li>
-          <li><a class="navTextInner" href="lifear-faq.html">Help/FAQ</a></li>
-          <li><a class="navTextInner" href="lifear-legal.html">Legal</a></li>
-        </ul>
-	    </li> 
-      <li><a class="navText" href="portfolio.html">Portfolio</a></li>
-      <li><a class="navText" href="contact.html">Contact</a></li>
-	  <li><a class="navText" href="privacy-policies.html">Privacy Policies</a></li>
-    </ul>
+  <img src="../Resources/universal/lightDark_light.svg"
+    style="position:absolute;bottom:50px;right:50px;height:45px;width:45px;" id="toggle" />
+  <ul id="list">
+    <li><a class="navText" href="/">Home</a></li>
+    <li><a class="navText" href="lifear.html">LifeAR</a>
+      <ul class="innerMenu">
+        <li><a class="navTextInner" href="lifear-gallery.html">Gallery</a></li>
+        <li><a class="navTextInner" href="lifear_business.html#Pricing">Pricing</a></li>
+        <li><a class="navTextInner" href="lifear-faq.html">Help/FAQ</a></li>
+        <li><a class="navTextInner" href="lifear-legal.html">Legal</a></li>
+      </ul>
+    </li>
+    <li><a class="navText" href="portfolio.html">Portfolio</a></li>
+    <li><a class="navText" href="contact.html">Contact</a></li>
+    <li><a class="navText" href="privacy-policies.html">Privacy Policies</a></li>
+  </ul>
 </nav>
-
 <script>
-  $('#navcheck').change(function() {
+  $('#navcheck').change(function () {
     if ($('#navcheck').is(":checked")) {
-      $('body').css('overflow','hidden');
+      $('body').css('overflow', 'hidden');
     } else {
-      $('body').css('overflow','auto');
-      $('body').css('padding-right',"0");
+      $('body').css('overflow', 'auto');
+      $('body').css('padding-right', "0");
     }
-  }); 
+  });
+
+  //dark mode toggling - basically just add and remove the dark mode stylesheet
+  var darkMode = false;
+  $(document).ready(function () {
+    darkMode = sessionStorage.getItem('darkMode', "false");
+    toggleDarkMode();
+  })
+
+  $('#toggle').click(function () {
+    darkMode = darkMode === "true" ? "false" : "true"; //change the current state variable
+    sessionStorage.setItem('darkMode', darkMode);
+    toggleDarkMode();
+  });
+
+  function toggleDarkMode() {
+    console.log(darkMode);
+    if (darkMode === "true") {//add dark mode styling
+      console.log("mounting dark");
+      $('head').append('<link id="darkStyle" rel="stylesheet" type="text/css" href="../scss/darkMode.css">');
+      $('#toggle').attr("src", "../Resources/universal/lightDark_dark.svg");
+    } else {//remove dark mode styling
+      console.log("removing dark");
+      $('#darkStyle').remove();
+      $('#toggle').attr("src", "../Resources/universal/lightDark_light.svg");
+    }
+  }
 </script>
