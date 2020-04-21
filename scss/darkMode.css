@@ -65,3 +65,19 @@ nav::before{
 nav.lifear::before{
     background-image: url(../Resources/universal/menu-lifear_dark.svg);
 }
+
+/* mobile nav */
+@media screen and (max-width: 500px){
+nav.red::before{
+    background-color: #ab3030;
+    background-image: none;
+}
+nav::before{
+    background-color: #3346b0;
+    background-image: none;
+}
+nav.lifear::before{
+    background-color: #3286ab;
+    background-image: none;
+}
+}
