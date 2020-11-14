@@ -9,6 +9,12 @@
     <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
 </head>
 <body style="height: 100%; width: 100%;"> 
-  <iframe src="https://d383wmbzk2m2tu.cloudfront.net/#/" title="LifeAR Content Portal" style="height: 100%; width: 100%; border: none;"></iframe>
+  <iframe id="frame" src="https://d383wmbzk2m2tu.cloudfront.net/#/" title="LifeAR Content Portal" style="height: 100%; width: 100%; border: none;"></iframe>
 </body>
+<script>
+  window.onload = function(){
+    const root =  window.location.href.split('?')[0];
+    document.getElementById("frame").src = "https://d383wmbzk2m2tu.cloudfront.net/#/" + window.location.href.substring(root.length+1);
+  }
+</script>
 </html>
