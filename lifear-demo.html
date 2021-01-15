@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGApps - LifeAR Demo</title>
+    <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
+</head>
+<body>
+    <!-- template -->
+    <div id="header"></div>
+    <div id="nav"></div>
+    <script >
+        $("#header").load("html-elements/header.html",function() {
+            $(".headerTitle").text("LifeAR - Demo");
+            $(".headerImage").remove();
+            $(".headerLogo").remove();
+            $(".headerSubtitle").remove();
+        });
+        $("#nav").load("html-elements/nav.html");
+    </script>
+    <!-- main content -->
+    <div id="contents">
+        <div id="AboutSection" class="Section">
+            <h2 class="text-blue" style="text-align: center;"> Scan the image below in the LifeAR demo mode to see a demonstration of what LifeAR can do</h2>
+            <img src="Resources/pages/lifear/gallery/dgappscard.jpg" />
+        </div>
+        <h2 class="text-blue">Things to try:</h2>
+        <ul>
+            <li>Rotate your phone to see the video follow the target</li>
+            <li>Click the menu in the bottom right corner of the screen to access fullscreen, share and save options</li>
+            <li>Swipe up to see the linked website</li>
+            <li>Pinch to zoom</li>
+        </ul>
+    </div>
+    <div id="footer"></div>
+    <div id="superFooter"></div>
+    <!-- main content ends -->
+</body>
+</html>
