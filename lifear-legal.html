@@ -9,25 +9,22 @@
     <link rel="shortcut icon" type="image/png" href="Resources/universal/logo.png"/>
 </head>
 <body>
+  <div id="disclaimer"></div>
+  <script>
+      $("#disclaimer").load("html-elements/LifeARDisclaimer.html");
+  </script>   
+    <!-- template -->
   <div id="header"></div>
+  <div id="nav"></div>
   <script >
       $("#header").load("html-elements/header.html",function() {
             $(".header").addClass("tall");
             $(".headerTitle").css({"margin-top": "0px"});
-        });
-    </script>
-  
-  <!-- template -->
-  <div id="nav"></div>
-  <script >
-       $("#nav").load("html-elements/nav.html");
+      });
+      $("#nav").load("html-elements/nav.html");
     </script>
   <!-- main content -->
   <div id="contents">
-    <div id="disclaimer"></div>
-    <script>
-        $("#disclaimer").load("html-elements/LifeARDisclaimer.html");
-    </script>   
         <br>
         <h2 class="text-lifear-dark">Terms & Conditions</h2>
         <p>
